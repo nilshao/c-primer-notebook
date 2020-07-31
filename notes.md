@@ -425,6 +425,17 @@ int main(){
 using std::string;
 ```
 
+#### 定义和初始化string对象
+
+几种初始化string对象的方式：
+
+```C++
+    string s1;
+    string s2 = s1;
+    string s3 = "hiya";
+    string s4(10,'c');            //10个c
+```
+
 ## 4. 表达式
 
 ## 5. 语句
