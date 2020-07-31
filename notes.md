@@ -425,16 +425,74 @@ int main(){
 using std::string;
 ```
 
-#### 定义和初始化string对象
+#### 3.2.1. 定义和初始化string对象
 
-几种初始化string对象的方式：
+几种初始化string对象的方式，直接初始化不用'='，复制初始化用'。
 
 ```C++
     string s1;
     string s2 = s1;
     string s3 = "hiya";
     string s4(10,'c');            //10个c
+    string s5(s1);
+    string s6("hiya");
 ```
+
+#### 3.2.2. string对象上的操作
+
+常用操作
+
++ os<<s
++ is>>s
++ getline(is, s)                        //从is中读取一行赋给s，返回is
++ s.empty(), s.size();
++ s[n]
++ s1+s2, s1=s2, s1==s2, s1!=s2
++ <,>,<=,>=
+
+读写string对象，可以用IO操作符读写string对象：
+
+```C++
+int main(){
+    string s;
+    cin >> s;
+    cout<<s<<endl;
+    
+    return 0;
+}
+```
+
+如果程序输入的是"   Hello World",输出是"Hello"。输出结果没有空格。
+
+```C++
+    string s1,s2;
+    cin >> s1 >> s2;
+    cout<< s1 << s2 << endl;
+```
+
+输入"   Hello World"，输出"HelloWorld"。
+
+```C++
+int main(){
+    string world;
+    while(cin >> word)
+        cout << word << endl;
+    return 0;
+}
+```
+
+读取未知数量的string对象。
+
+```C++
+int main(){
+    string line;
+    while(getline(cin,line))
+        cout<< line <<endl;
+    return 0;
+}
+```
+
+有时我们希望在最终得到的字符串中保留输入时的空白符。getline从给定的输入流中读入内容，直到遇到换行符为止。
 
 ## 4. 表达式
 
