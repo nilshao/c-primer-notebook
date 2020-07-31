@@ -457,7 +457,7 @@ int main(){
     string s;
     cin >> s;
     cout<<s<<endl;
-    
+
     return 0;
 }
 ```
@@ -493,6 +493,51 @@ int main(){
 ```
 
 有时我们希望在最终得到的字符串中保留输入时的空白符。getline从给定的输入流中读入内容，直到遇到换行符为止。
+
+##### 3.2.2.1. string的.empty()和.size()
+
+empty操作
+
+```C++
+    while(getline(cin,line))
+        if(!line.empty())
+            cout << line << endl;
+```
+
+size操作
+
+```C++
+    while(getline(cin, line))
+        if(line.size() > 80)
+            cout << line << endl;
+```
+
+##### 3.2.2.2. string::size_type 类型
+
+.size()返回一个string::size_type类型的值。是一个无符号整型数，因此如果在表达式中混用了带符号数和无符号数将可能产生意想不到的结果。
+
+```C++
+int main() {
+    string str("abc");
+    int a = -3;
+    if(str.size() < a){
+        std::cout<<"Why is here?"<<std::endl;
+    }
+    return 0;
+}
+```
+
+##### 3.2.2.3. 比较string对象
+
+##### string对象相加
+
+标准库中允许把字符字面值和字符串字面值。当把string对象和字符字面值及字符串字面值混在一条语句中使用时，必须确保每个加法运算符(+)的两侧的运算对象至少有一个是string。
+
+#### 3.2.3. 处理string对象中的字符
+
+cctype头文件。
+
+### 标准库类型vector
 
 ## 4. 表达式
 
