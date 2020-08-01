@@ -589,7 +589,7 @@ string和vector支持迭代器，有迭代器的类型同时拥有返回迭代�
 + --iter 令iter只是容器中的上一个元素
 + iter1 == iter2, iter1 != iter2
   
-通过解引用迭代器来获取他所指的元素
+1. 通过解引用迭代器来获取他所指的元素
 
 ```C++
     string s("some string");
@@ -598,6 +598,18 @@ string和vector支持迭代器，有迭代器的类型同时拥有返回迭代�
         *it = toubpper(*it);
     }
 ```
+
+2. 将迭代器从一个元素移动到另外一个元素
+
+递增运算符，递减运算符，来实现向前移动一个位置，向后移动一个位置。
+
+```C++
+    for(auto it = s.begin(); it!=s.end() && !isspace(*it); ++it){
+        *it = toupper(*it);         
+    }
+```
+
+##### 迭代器类型
 
 ## 4. 表达式
 
