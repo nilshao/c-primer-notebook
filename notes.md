@@ -849,7 +849,7 @@ if else 语句的形式是
 
 使用花括号，也可以解决悬垂else问题。
 
-#### switch语句
+#### 5.3.2. switch语句
 
 提供了一条便利的途径使得我们能够在若干固定选项中做出选择。如统计各个元音个数：
 
@@ -917,6 +917,31 @@ switch语句首先对括号里的表达式求值，该表达式紧跟在关键�
 ```
 
 ##### default 标签
+
+如果没有任何一个case标签匹配上switch表达式的值，程序将执行紧跟在default标签后面的语句。比如如果不是元音，则均递增名为otherCnt的变量。
+
+```c++
+    switch(ch){
+        case 'a': case 'e': case 'i': case 'o': case 'u':
+            ++vowelCnt++;
+            break;
+        default:
+            ++otherCnt;
+            break;
+    }
+```
+
+标签不应该孤零零的出现，他后面必须跟上一条语句或者另外一个case标签。如果switch结构以一个空的default标签作为结束，则该default标签后面必须跟上一条空语句或一个空块。
+
+##### switch内部的变量定义！！！
+
+### 迭代语句
+
+### 跳转语句
+
+break, continue, goto, return。本节介绍前三种
+
+#### break语句
 
 ## 6. 函数
 
