@@ -851,6 +851,73 @@ if else 语句的形式是
 
 #### switch语句
 
+提供了一条便利的途径使得我们能够在若干固定选项中做出选择。如统计各个元音个数：
+
+```C++
+    unsigned aCnt = 0, eCnt = 0, iCnt = 0, oCnt = 0, uCnt = 0;
+    char ch;
+    while(cin >> ch){
+        switch(ch){
+            case 'a':
+                ++aCnt;
+                break;
+            case 'e':
+                ++eCnt;
+                break;
+            case 'i':
+                ++iCnt;
+                break;
+            case 'o':
+                ++oCnt;
+                break;
+            case 'u':
+                ++uCnt;
+                break;
+        }
+    }
+```
+
+switch语句首先对括号里的表达式求值，该表达式紧跟在关键字switch的后面，可以是一个初始化的变量声明。表达式的值转化为整数类型，然后与每个case标签的值比较。如果表达式和某个case标签值匹配成功，程序从该标签之后的第一条语句开始执行，直到switch结尾或者遇到一条break为止。break作用是中断当前的控制流，此时break将控制权转移到switch外面。因为switch是while循环体内唯一的语句所以回到while外再一次判断其他cin。如果都没有匹配，则一直在while处。
+
+##### switch内部的控制流
+
+如果某个case标签匹配成功，将从该标签开始往后顺序执行所有case分支，除非显式地中断了这一过程，否则将直到switch的结尾处才会停下来。因此大多数情况下，下一个case标签前应该有一个break语句。
+
+然而也有一些时候默认的switch行为才是程序真正需要的。每个case标签只能对应一个值，但是有时候我们希望两个或更多个值共享同一组操作，此时我们就故意省略掉break语句，使得程序可以连续执行若干个case标签。
+
+```C++
+    switch(ch){
+        case 'a': case 'e': case 'i': case 'o': case 'u':
+            ++vowelCnt++;
+            break;
+    }
+```
+
+##### 漏写break的缺陷
+
+有一种常见错觉是程序只执行匹配成功的那个case分支的语句，但实际上假如一个ch是'e'。此时程序直接执行case'e'标签后的代码，把eCnt值加一，接下来程序将跨过case标签边界，将iCnt, oCnt和uCnt都加1。
+
+```C++
+    unsigned aCnt = 0, eCnt = 0, iCnt = 0, oCnt = 0, uCnt = 0;
+    char ch;
+    while(cin >> ch){
+        switch(ch){
+            case 'a':
+                ++aCnt;
+            case 'e':
+                ++eCnt;
+            case 'i':
+                ++iCnt;
+            case 'o':
+                ++oCnt;
+            case 'u':
+                ++uCnt;
+        }
+    }
+```
+
+##### default 标签
+
 ## 6. 函数
 
 ## 7. 类
