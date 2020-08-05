@@ -6,6 +6,40 @@
 
 在第一章中使用的Sales_item类是一个抽象数据类型，我们通过他的接口来使用一个Sales_item对象。我们不能访问Sales_item对象的数据成员，实际上，我们甚至根本不知道这个类有哪些数据成员。与之相反，Sales_data类不是一个抽象数据类型，它允许类的用户直接访问它的数据成员，并且要求由用户来编写操作，。要想把Sales_data变成抽象数据类型。我们需要定义一些操作以供类的用户使用。一旦Sales_data定义了他自己的操作，我们就可以封装(隐藏)他的数据成员了。
 
+#### 设计Sales_data类
+
+我们最终目的是令Sales_data支持与Sales_item类完全一样的操作集合，Sales_item类有一个名为isbn的成员函数，并且支持+,=,+=,>>和<<运算符。我们将在14章学习如何自定义运算符，现在我们先为这些运算定义普通的函数形式。执行加法和IO的函数不作为Sales_data的成员，相反的，我们将其定义为普通函数：执行复合赋值运算的函数是成员函数，Sales_data类无需专门定义赋值运算。
+
+综上所述，Sales_data的接口应包含以下操作：
+
++ 一个isbn成员函数，用于返回对象的ISBN编号
++ 一个combine成员函数，用于讲一个Sales_data对象加到另一个对象上
++ 一个名为add的函数，执行两个Sales_data对象的加法
++ 一个read函数，将数据从istream读入到Sales_data对象中
++ 一个print函数，将Sales_data对象的值输出到ostream
+
+##### 使用改进的Sales_data类
+
+在考虑如何实现我们的类之前，首先来看看应该如何使用上面这些接口函数，举个例子，我们使用这些函数编写书店程序的另外一个版本，其中不再使用Sales_item对象，而是使用Sales_data对象：
+
+```C++
+    Sales_data total;
+    if(read(cin, total)){
+        Sales_data trans;
+        while(read(cin, trans)){
+            if(total.isbn() == trans.isbn())
+                total combine(trans);
+            else{
+                print(cout, total)<< endl;
+                total = trans;
+            }
+        }
+        print(cout, total) << endl;
+    } else{
+        cerr << "No data ?!" << endl;
+    }
+```
+
 ### 访问控制与封装
 
 ### 类的其它特性
