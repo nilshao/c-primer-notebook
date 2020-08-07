@@ -80,7 +80,7 @@ int main(){
 
 对于书店程序来说，假定类名Sales_item，头文件Sales_item.h中已经定义了这个类。使用标准库设施，必须包含相关头文件，类似的，也需要使用头文件来访问为自己的应用程序所定义的类，标准库头文件通常不带后缀。
 
-#### Sales_item类
+#### 1.5.1. Sales_item类
 
 Sales_item类定义了一个名为Sales_item的类型。与内置类型一样，我们可以定义类类型的变量。
 
@@ -95,3 +95,44 @@ Sales_item类定义了一个名为Sales_item的类型。与内置类型一样，
 + 用赋值运算符(=)讲一个Sales_item对象的值赋予另一个Sales_item对象
 + 用加法运算符
 + 用复合赋值运算符
+
+##### 读写Sales_item
+
+##### Sales_item对象的加法
+
+#### 1.5.2. 初识成员函数
+
+将两个Sales_item对象相加的程序首先应该检查两个对象是否具有相同的ISBN：
+
+```C++
+#include <iostream>
+#include "Sales_item.h"
+int main(){
+    Sales_item item1, item2;
+    std::cin >> item1 >> item2;
+    if(item1.isbn() == item2.isbn()){
+        std::cout<< item1+item2 << std::endl;
+        return 0;
+    }else{
+        std::cerr << "Data must refer to same ISBN" << std::endl;
+        return -1;
+    }
+}
+
+```
+
+##### 什么是成员函数？
+
+```
+    item1.isbn() == item2.isbn();
+```
+
+调用了名为isbn的成员函数，成员函数是定义为类的一部分的函数。使用点运算符来表达我们需要“名为item1的对象的isbn成员”。点运算符只能用于类类型的对象，其左侧运算对象必须是一个类类型的对象，右侧运算对象必须是该类型的一个成员名，运算结果为右侧运算对象指定的成员。当用点运算符访问一个成员函数时，通常我们是想调用该函数，我们使用调用运算符()，来调用一个函数，调用运算符是一对圆括号，里面放置实参列表（可能为空），本例中成员函数isbn不接受参数。
+
+### 1.6. 书店程序
+
+现在我们准备好完成书店程序：
+
+我们需要从一个文件中读取销售记录，生成每本书的销售报告，显示售出册数，总销售额和平均售价，假设每个ISBN书豪的所有销售记录在文件中是聚在一起保存的。
+
+我们的程序将每个ISBN所有数据合并起来，存入名为total的变量中，我们使用另一个名为trans
