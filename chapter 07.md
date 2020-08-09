@@ -28,7 +28,7 @@
         Sales_data trans;
         while(read(cin, trans)){
             if(total.isbn() == trans.isbn())
-                total combine(trans);
+                total.combine(trans);
             else{
                 print(cout, total)<< endl;
                 total = trans;
@@ -44,9 +44,46 @@
 
 如果检测到了读入数据，我们定义变量trans用于存放每一条交易。while语句的条件部分同样是检查read函数的返回值，只要输入操作成功，条件就被满足，意味着我们可以处理一条新的交易。
 
-在while内部，我们分别调用total和trans的isbn成员以比较他们的ISBN编号
+在while内部，我们分别调用total和trans的isbn成员以比较他们的ISBN编号。如果total和trans知识的是同一本书，我们调用
+
+##### 定义改进的Sales_data类
+
+
 
 ### 访问控制与封装
+
+我们已经定义了接口，但是没有封装，用户可以直达Sales_data对象的内部并且控制它的具体实现细节，用访问说明符加强类的封装性。
+
++ 定义在public说明符之后的成员在整个程序内可被访问，public成员定义类的接口
++ 定义在private说明符之后的成员可以被类的成员函数访问，但是不能被使用该类的代码访问，private部分封装(即隐藏了)类的实现细节
+
+修改后的新形式：
+
+```C++
+class Sales_data{
+public:
+    Sales_data() = default;
+    Sales_data(const std::string &s, unsigned n, double p):
+        bookNo(s), units_sold(n), revenue(p*n){}
+    Sales_data(const std::string &s: bookNo(s)){}
+    Sales_data(std::istream&);
+    std::string isbn() const {return bookNo;}
+    Sales_data &combine(const Sales_data&);
+private:
+    double avg_price() const{
+        return units_sold ? revenue/units_sold : 0;
+    }
+    std::string bookNo;
+    unsigned units_sold = 0;
+    double revenue = 0.0;
+};
+```
+
+一个类可以包含0个或多个访问说明符，而且对于某个访问说明符能出现多少次也没有严格规定，每个访问说明符指定了接下来的成员的访问级别，其有效范围直到出现下一个访问说明符或者到达类的结尾处为止。
+
+##### class 和 struct 关键字
+
+struct和class的默认访问权限不太一样。类可以在他的第一个访问说明符之前定义成员，对这种成员的访问权限依赖于类定义的方式，如果我们使用struct关键字，则定义在第一个访问说明符之前的成员是public的，相反，如果是class关键字，这些成员是private的。因此当我们希望定义的类的所有成员是public时，使用struct，反之，如果希望成员是private的，使用class。
 
 ### 类的其它特性
 
