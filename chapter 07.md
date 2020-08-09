@@ -85,6 +85,30 @@ private:
 
 struct和class的默认访问权限不太一样。类可以在他的第一个访问说明符之前定义成员，对这种成员的访问权限依赖于类定义的方式，如果我们使用struct关键字，则定义在第一个访问说明符之前的成员是public的，相反，如果是class关键字，这些成员是private的。因此当我们希望定义的类的所有成员是public时，使用struct，反之，如果希望成员是private的，使用class。
 
+#### 友元
+
+private的数据成员，print,add,read无法正常编译了，因为他们是类的一部分，但不是类的公有成员。类可以允许其他类或者函数访问他的非公有成员，方法是令其他类或者函数成为他的友元，如果类想把一个函数作为他的友元，只需要增加一条以friend关键字开始的函数声明语句。
+
+```C++
+class Sales_data{
+//为 Sales_data 的非成员函数所做的友元声明
+friend Sales_data add(const Sales_data& , const Sales_data&);
+friend std::istream &read(std::istream&, Sales_data& );
+friend std::ostream &print(std::ostream&, const Sales_data&);
+
+public:
+    // ...
+private:
+    // ...
+};
+//Sales_data接口的非成员组成部分的声明
+friend Sales_data add(const Sales_data& , const Sales_data&);
+friend std::istream &read(std::istream&, Sales_data& );
+friend std::ostream &print(std::ostream&, const Sales_data&);
+```
+
+友元声明只能出现在类定义的内部但是具体位置不限。
+
 ### 类的其它特性
 
 ### 类的作用域
