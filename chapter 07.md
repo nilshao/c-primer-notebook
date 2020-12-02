@@ -46,9 +46,11 @@
 
 在while内部，我们分别调用total和trans的isbn成员以比较他们的ISBN编号。如果total和trans知识的是同一本书，我们调用
 
-##### 定义改进的Sales_data类
+#### 定义改进的Sales_data类
 
-#####
+##### 定义成员函数
+
+
 
 #### 构造函数
 
