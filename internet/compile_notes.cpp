@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
 
-std::string NOTELIST;
-std::string OUTPUTLIST;
+std::string NOTELIST_FILE;
+std::string OUTPUTLIST_FILE;
+std::vector<std::string> notelist;
 
 void CompileTogether(){
     ifstream fin("input.txt");
@@ -23,6 +25,7 @@ void CompileTogether(){
 }
 
 int main(){
+    GetFileNames();
     CompileTogether();
     return 0;
 }

@@ -1,1 +1,6 @@
 lesson1.md
+lesson2.md
+lesson3.md
+lesson4.md
+lesson5.md
+lesson6.md
