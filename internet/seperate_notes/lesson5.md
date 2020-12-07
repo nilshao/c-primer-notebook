@@ -271,4 +271,4 @@ ssthresh：slow start threshold 慢开始阈值。加法增大以拥塞避免。
 
 + 快重传和快恢复：
 
-
+快恢复不用从慢开始的1个报文段大小开始，而是直接从新的ssthresh。
