@@ -123,7 +123,7 @@ TCP/IP协议栈的位置（橙色）
 
 数据部分由运输层
 
-![IP数据报格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/IP数据报格式.JPG)
+![IPv4数据报格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/ipv4数据报格式.JPG)
 
 固定部分为20字节固定长度
 
