@@ -350,6 +350,8 @@ IPv6改进了首部格式，加快路由器处理速度，转发数据报速度
 
 固定40B首部：
 
+![IPv6数据报格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/ipv6数据报格式.JPG)
+
 + 版本：指明了协议版本，总是6
 
 + 优先级：区分数据报的类别和优先级
