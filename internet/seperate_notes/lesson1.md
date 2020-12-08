@@ -342,7 +342,7 @@ OSI模型层之间有很多重复功能
 
 ### TCP/IP模型
 
-![分层结构2](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter01/分层结构2.jpeg)
+![osi与tcpip模型](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter01/osi与tcpip模型.JPG)
 
 相同点：
 
