@@ -220,9 +220,9 @@ OSI模型层之间有很多重复功能
 
 ### 用OSI参考模型解释通信过程
 
-![osi参考模型解释通信过程](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter01/osi参考模型解释通信过程.png)
+![osi参考模型解释通信过程](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter01/osi参考模型解释通信过程.PNG)
 
-![osi参考模型解释通信过程2](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter01/osi参考模型解释通信过程2.png)
+![osi参考模型解释通信过程2](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter01/osi参考模型解释通信过程2.PNG)
 
 ### **应用层**
 
