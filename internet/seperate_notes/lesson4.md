@@ -503,8 +503,16 @@ RIP协议要求网络中**每一个路由器**都维护从它自己到其他**�
 
 2. 
 
+
+3. 
+
+4. 返回
+
 图片，补文字
 
 ![距离向量算法](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/距离向量算法.jpeg)
 
 
+RIP协议报文格式
+
+![RIP协议报文格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/RIP协议报文格式.jpeg)
