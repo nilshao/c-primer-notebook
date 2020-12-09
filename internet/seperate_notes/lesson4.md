@@ -547,4 +547,28 @@ OSPF最主要特征是使用分布式的链路状态协议
 
 ![链路状态路由算法](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/链路状态路由算法.jpeg)
 
+7. 使用Dijkstra根据自己的链路状态数据库构造到其他节点间的最短路径。
+
+## OSPF的区域
+
+![OSPF的区域](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/OSPF的区域.JPG)
+
+## OSPF分组
+
+OSPF分组用IP数据报传送，RIP是用UDP、
+![OSPF分组](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/OSPF分组.JPG)
+
+## 其他特点
+
+1. 每隔30min，要刷新一次数据库中的链路状态
+
+2. 由于一个路由器的链路状态只涉及到与相邻路由器的连通状态，因而与整个互联网的规模并无直接关系。因此当互联网规模很大时，OSPF协议要比距离向量协议RIP好很多。
+
+3. OSPF不存在坏消息传递慢的问题，收敛速度快
+
+
+
+
+
+
 
