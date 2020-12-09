@@ -461,10 +461,19 @@ IPv6改进了首部格式，加快路由器处理速度，转发数据报速度
 ![AS3](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/AS3.JPG)
 
 
+## RIP协议和距离向量算法
+
+回顾：
+
+![AS2](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/AS2.jpeg)
+
+RIP协议是一种分布式的，基于距离向量的路由选择协议，是因特网的协议标准，最大优点是简单。
+
+RIP协议要求网络中**每一个路由器**都维护从它自己到其他**每一个目的网络**的唯一最佳距离纪录（跳数）
+
+例子：R2的路由表
 
 
+![R2的路由表](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/R2的路由表.jpeg)
 
-
-
-
-
+距离通常指“跳数”，即从源端口到目的端口所经过的路由器个数，经过一个路由器跳数+1，特别的，从一路由器到直接连接的网络距离为1。RIP允许一条路由最多只能包含15个路由器，因此距离为**16表示网络不可达**。
