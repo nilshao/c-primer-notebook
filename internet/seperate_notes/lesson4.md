@@ -589,13 +589,13 @@ BGP交换的网络可达性的信息就是要到达某一个网络所要经过�
 
 BGP发言人交换路径向量：
 
-![BGP协议交换信息的过程1](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/BGP协议交换信息的过程1.jpeg)
+![BGP协议交换信息的过程1](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/BGP协议交换信息的过程1.JPG)
 
-![BGP协议交换信息的过程2](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/BGP协议交换信息的过程2.jpeg)
+![BGP协议交换信息的过程2](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/BGP协议交换信息的过程2.JPG)
 
 
 ### BGP协议报文格式
 
-![BGP协议报文格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/BGP协议报文格式.jpeg)
+![BGP协议报文格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/BGP协议报文格式.JPG)
 
 ###
