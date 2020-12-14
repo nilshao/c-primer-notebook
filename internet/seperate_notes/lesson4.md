@@ -670,11 +670,15 @@ IP组播地址让源设备能够将分组发送给一组设备，
 
 A移动到了下一个网络
 
+![移动IP通信过程2](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/移动IP通信过程2.jpeg)
 
+## 网络层设备
 
+路由器：是一种具有多个输入端口和多个输出端口的专用计算机，其任务是转发分组
 
+**路由器结构：**
 
-
+![路由器结构](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/路由器结构.jpeg)
 
 
 
