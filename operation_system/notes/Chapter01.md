@@ -193,15 +193,15 @@ CPU如何判断当前是否可以执行特权指令？规定两种处理器状�
 
 两种分类方式
 
-![中断的分类](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/中断的分类.png)
+![中断的分类1](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/中断的分类1.png)
 
 
 ![中断的分类2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/中断的分类2.png)
 
 
+### 外中断的处理过程
 
-
-
+![外中断的处理过程](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/外中断的处理过程.png)
 
 
 
