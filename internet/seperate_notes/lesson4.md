@@ -697,8 +697,9 @@ A移动到了下一个网络
 路由器中的输入或输出队列产生溢出是造成分组丢失的重要原因。
 
 
+### 三层设备的区别
 
 
-
+![三层设备的区别](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/三层设备的区别.jpeg)
 
 
