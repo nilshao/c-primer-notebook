@@ -710,3 +710,7 @@ A移动到了下一个网络
 
 路由转发是
 
+![路由表和路由转发](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/路由表和路由转发.jpeg)
+
+
+
