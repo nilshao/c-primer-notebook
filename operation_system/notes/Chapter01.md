@@ -221,8 +221,11 @@ CPU如何判断当前是否可以执行特权指令？规定两种处理器状�
 
 ### 系统调用和库函数
 
+![系统调用与库函数](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/系统调用与库函数.png)
 
+### 系统调用背后的过程
 
+传递系统调用参数 -> 执行陷入指令（用户态） -> 执行系统调用相应服务程序（核心态） -> 返回用户程序
 
 
 
