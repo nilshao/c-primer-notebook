@@ -215,7 +215,17 @@ CPU如何判断当前是否可以执行特权指令？规定两种处理器状�
 应用程序通过系统调用操作系统的服务。系统中的各种共享资源都由操作系统统一掌管，因此在用户程序中，凡是与资源相关的操作（如存储分配，IO操作，文件管理等）都必须通过系统调用的方式向操作系统提出服务请求，由操作系统代为完成。这样可以保证系统的稳定性和安全性，防止用户进行非法操作。
 
 
-系统调用
+系统调用相关处理涉及到对系统资源的管理，对进程的控制等，这些功能需要一些特权指令才能完成，因此系统调用的相关处理需要在核心态下进行
+
+![系统调用](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/系统调用.png)
+
+### 系统调用和库函数
+
+
+
+
+
+
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/.jpeg)
 
