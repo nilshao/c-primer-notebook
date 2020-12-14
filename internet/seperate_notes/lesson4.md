@@ -624,7 +624,7 @@ BGP是一个应用层协议
 
 3. BGP是一个外部网关协议，在不同的自治系统之间交换路由信息，由于网络环境复杂，需要保证可靠传输，所以采用TCP
 
-
+![三种路由协议比较](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/三种路由协议比较.JPG)
 
 
 
