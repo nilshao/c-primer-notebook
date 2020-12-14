@@ -626,6 +626,19 @@ BGP是一个应用层协议
 
 ![三种路由协议比较](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/三种路由协议比较.JPG)
 
+## IP组播
+
+IP数据报的三种传输方式：单播，广播，组播（多播）
+
+* 单播：单播用于发送数据包到单个目的地，且每发送一份单播报文都使用一个单播IP地址作为目的地址，是一种点对点传送方式。
+
+* 广播：广播是指发送数据包到同一广播域或子网内的所有设备的一种数据传输方式，是一种点对多点的传输方式
+
+* 组播（多播）：点对多点的传播方式
+
+![组播多播](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/组播多播.jpeg)
+
+
 
 
 
