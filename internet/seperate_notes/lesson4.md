@@ -639,13 +639,27 @@ IP数据报的三种传输方式：单播，广播，组播（多播）
 ![组播多播](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/组播多播.jpeg)
 
 
+单播，组播示意图
 
 
+### IP组播地址
 
+IP组播地址让源设备能够将分组发送给一组设备，
+属于多播组的设备将被分配一个组播组IP地址（一群共同需求主机的相同标识）。
 
+组播地址范围是224.0.0.0 - 239.255.255.255（D类地址）
 
+1. 组播数据报也是“尽最大努力交付”，不提供可靠交付，应用于UDP
 
+2. 对组播数据报不产生ICMP差错报文
 
+3. 并非所有D类地址都可以作为组播地址。有些地址已经被指派为永久组播地址
+
+## 移动IP
+
+### 移动IP概念
+
+![移动IP概念](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/移动IP概念.jpeg)
 
 
 
