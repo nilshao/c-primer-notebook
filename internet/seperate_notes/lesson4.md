@@ -702,4 +702,11 @@ A移动到了下一个网络
 
 ![三层设备的区别](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/三层设备的区别.jpeg)
 
+### 路由表和路由转发
+
+路由表是根据路由选择算法得出的，主要作用是路由选择，总用软件来实现
+
+默认路由
+
+路由转发是
 
