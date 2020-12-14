@@ -27,13 +27,28 @@
 
 ![系统资源管理1](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/系统资源管理1.jpeg)
 
+例子：QQ聊天
 
+1. 在各个文件夹中找到QQ安装的位置：文件管理功能
+
+2. 把该程序相关数据放入内存：存储器管理功能
+
+3. 对应的进程被处理机（CPU）处理： 处理机管理功能
+
+4. 开始和朋友聊天，调用摄像头：设备管理功能
+
+## 作为用户与计算机硬件之间的接口
+
+![作为用户与计算机硬件之间的接口](https://github.com/nilshao/cpp-notebook/raw/master/ioperation_system/images/chapter1/作为用户与计算机硬件之间的接口.jpeg)
+
+
+![](https://github.com/nilshao/cpp-notebook/raw/master/ioperation_system/images/chapter1/.JPG)
 
 
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/ioperation_system/images/chapter1/.jpeg)
 
-
+![](https://github.com/nilshao/cpp-notebook/raw/master/ioperation_system/images/chapter1/.JPG)
 
 
 
