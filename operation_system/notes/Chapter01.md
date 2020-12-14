@@ -12,7 +12,7 @@
 
 ## 操作系统的功能和目标
 
-![操作系统介绍1](https://github.com/nilshao/cpp-notebook/raw/master/internet/images/chapter01/操作系统介绍1.jpeg)
+![操作系统介绍1](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/操作系统介绍1.jpeg)
 
 1. 操作系统作为系统资源的管理者，包括软件，硬件，文件等，需要提供什么功能？
 
@@ -25,10 +25,13 @@
 进程是一个程序的执行过程，执行前需要将该程序放到内存中，才能被CPU处理。
 
 
+![系统资源管理1](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/系统资源管理1.jpeg)
 
 
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/internet/images/chapter01/.jpeg)
+
+
+![](https://github.com/nilshao/cpp-notebook/raw/master/ioperation_system/images/chapter1/.jpeg)
 
 
 
