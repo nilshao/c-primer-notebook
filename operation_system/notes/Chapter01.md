@@ -156,7 +156,7 @@ CPU如何判断当前是否可以执行特权指令？规定两种处理器状�
 
 ### 操作系统的内核
 
-![操作系统的内核](https://github.com/nilshao/cpp-notebook/raw/master/ioperation_system/images/chapter1/操作系统的内核.PNG)
+![操作系统的内核](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/操作系统的内核.PNG)
 
 
 
