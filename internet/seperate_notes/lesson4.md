@@ -680,22 +680,24 @@ A移动到了下一个网络
 
 ![路由器结构](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/路由器结构.jpeg)
 
-
 **路由选择：** 根据所选定的路由选择协议构造出路由表，同时经常或定期的与相邻路由器交换路由信息而不断的更新和维护路由表。
 
-
 **分组转发：** 交换结构：根据转发表（路由表得来）对分组进行转发。转发vs路由选择：
-
 
 输入端口对线路上收到分组的处理
 
 ![输入端口对线路上收到分组的处理](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/输入端口对线路上收到分组的处理.jpeg)
 
-
 输出端口对线路上收到分组的处理
 
-
 ![输出端口对线路上收到分组的处理](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/输出端口对线路上收到分组的处理.jpeg)
+
+若路由器处理分组的速率赶不上分组进入队列的速率，则队列的存储空间必定减少到零，这就使后面再进入队列的分组由于没有存储空间而只能被丢弃
+
+路由器中的输入或输出队列产生溢出是造成分组丢失的重要原因。
+
+
+
 
 
 
