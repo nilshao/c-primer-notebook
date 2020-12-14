@@ -581,9 +581,11 @@ OSPF分组用IP数据报传送，RIP是用UDP
 
 + 多久交换？发生变化时更新有变化的部分。
 
-BGP交换的网络可达性的信息就是要到达某一个网络所要经过的一系列AS。
+BGP交换的网络**可达性的信息**就是要到达某一个网络所要经过的一系列AS。
 当BGP发言人互相交换了网络可达性的信息之后，
 各个BGP发言人就根据所采用的策略从收到的路由信息中找出到达各个AS的较好路由
+
+AS：自治系统
 
 ### BGP协议交换信息的过程
 
@@ -598,4 +600,4 @@ BGP发言人交换路径向量：
 
 ![BGP协议报文格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/BGP协议报文格式.JPG)
 
-###
+### 
