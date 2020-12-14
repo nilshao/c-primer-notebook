@@ -662,7 +662,9 @@ IP组播地址让源设备能够将分组发送给一组设备，
 ![移动IP概念](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/移动IP概念.jpeg)
 
 
+### 移动IP通信过程
 
+![移动IP通信过程](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/移动IP通信过程.jpeg)
 
 
 
