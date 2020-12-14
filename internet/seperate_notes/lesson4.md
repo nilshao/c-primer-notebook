@@ -666,7 +666,9 @@ IP组播地址让源设备能够将分组发送给一组设备，
 
 ![移动IP通信过程](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter04/移动IP通信过程.jpeg)
 
+3. 外部代理拆封数据报并发给A
 
+A移动到了下一个网络
 
 
 
