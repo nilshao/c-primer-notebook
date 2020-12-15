@@ -53,9 +53,23 @@ PCB是进程存在的唯一标志！！！
 
 ![进程的组织方式](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程的组织方式.jpeg)
 
+### 链接方式
 
+1. 执行指针：指向当前处于运行状态（执行态）的进程
 
+2. 就绪队列指针：指向当前处于就绪态的进程，通常会把优先级高的进程放在队头
 
+3. 阻塞队列指针：指向当前处于阻塞态的进程，很多操作系统还会根据阻塞原因不同，再分为多个阻塞队列
+
+### 索引方式
+
+建立相应功能的索引表
+
+![索引方式](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/索引方式.jpeg)
+
+## 进程的特征
+
+![进程的基本特征](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程的基本特征.jpeg)
 
 
 
