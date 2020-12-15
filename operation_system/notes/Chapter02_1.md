@@ -107,6 +107,31 @@ PCB是进程存在的唯一标志！！！
 
 即：实现进程转换 
 
+![进程控制1](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程控制1.PNG)
+
+原语控制：用原语实现进程控制，特点是执行期间不允许中断，必须一气呵成。这种不可以被中断的操作即被称为原子操作
+
+原语采用“关中断指令”和“开中断指令”实现。只允许再核心态下执行的特权指令。
+
+进程控制相关的原语：
+
+1. 更新PCB中的信息（如修改进程状态标志、将运行环境保存到PCB、从PCB恢复运行环境）
+
+    * 所有的进程控制原语一定都会修改进程状态标志
+
+    * 剥夺当前运行进程的CPU使用权必然要保存其运行环境
+
+    * 某进程开始运行前必然要恢复其运行环境
+
+2. 将PCB插入合适队列
+
+3. 分配/回收资源
+
+![进程的创建](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程的创建.jpeg)
+
+![进程的终止](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程的终止.jpeg)
+
+
 
 
 
@@ -131,7 +156,7 @@ PCB是进程存在的唯一标志！！！
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.png)
 
-
+![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.PNG)
 
 
 
