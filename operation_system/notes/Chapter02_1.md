@@ -218,9 +218,18 @@ PCB是进程存在的唯一标志！！！
 
 1. 用户级线程ULT（user-level-thread）
 
-用户级线程通过线程库实现
+用户级线程通过线程库实现，所有的线程管理都由应用程序负责（包括线程切换）。用户级线程中，线程切换在用户态下即可完成，无需操作系统干预。在用户看来有多个线程，但是在操作系统内核看来，并意识不到线程的存在，即用户级线程对用户不透明，对操作系统透明。
 
 ![用户级线程](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/用户级线程.png)
+
+2. 内核级线程KLT（kernel-level-thread）
+
+内核级线程管理工作由操作系统内核完成。
+
+![内核级线程](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/内核级线程.png)
+
+
+
 
 
 
