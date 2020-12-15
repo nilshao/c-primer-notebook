@@ -141,8 +141,11 @@ PCB是进程存在的唯一标志！！！
 
 阻塞原语唤醒原语必须成对使用
 
+![进程的切换](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程的切换.jpeg)
 
+## 进程通信
 
+![进程通信1](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程通信1.jpeg)
 
 
 
