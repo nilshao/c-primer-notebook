@@ -39,11 +39,19 @@ PCB是进程存在的唯一标志！！！
 
 ### PCB的组成：
 
+进程描述信息
 
+![PCB组成](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/PCB组成.jpeg)
 
+进程标识符PID：当进程被创建时，操作系统会为该进程分配一个唯一的、不重复的ID，用于区分不同的进程（类似于身份证号）
 
+寄存器值：当进程切换时需要把进程当前的运行情况记录下来保存在PCB中，如程序计数器的值表示当前程序执行到哪一句
 
+## 进程的组织
 
+在一个系统中通常有数十数百个PCB，如何有效组织多个线程
+
+![进程的组织方式](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程的组织方式.jpeg)
 
 
 
