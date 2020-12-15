@@ -115,6 +115,8 @@ PCB是进程存在的唯一标志！！！
 
 进程控制相关的原语：
 
+不论哪种原语，基本思路：
+
 1. 更新PCB中的信息（如修改进程状态标志、将运行环境保存到PCB、从PCB恢复运行环境）
 
     * 所有的进程控制原语一定都会修改进程状态标志
@@ -127,11 +129,13 @@ PCB是进程存在的唯一标志！！！
 
 3. 分配/回收资源
 
+如：
+
 ![进程的创建](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程的创建.jpeg)
 
 ![进程的终止](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程的终止.jpeg)
 
-
+![进程的阻塞和唤醒](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程的阻塞和唤醒.jpeg)
 
 
 
