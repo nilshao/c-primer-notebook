@@ -34,11 +34,20 @@
 
 
 
+
+
+
+
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpeg)
+
+![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpg)
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.JPG)
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.png)
+
+![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.PNG)
+
 
 
 

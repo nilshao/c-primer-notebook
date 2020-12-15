@@ -218,30 +218,47 @@ PCB是进程存在的唯一标志！！！
 
 1. 用户级线程ULT（user-level-thread）
 
-用户级线程通过线程库实现，所有的线程管理都由应用程序负责（包括线程切换）。用户级线程中，线程切换在用户态下即可完成，无需操作系统干预。在用户看来有多个线程，但是在操作系统内核看来，并意识不到线程的存在，即用户级线程对用户不透明，对操作系统透明。
+	用户级线程通过线程库实现，所有的线程管理都由应用程序负责（包括线程切换）。用户级线程中，线程切换在用户态下即可完成，无需操作系统干预。在用户看来有多个线程，但是在操作系统内核看来，并意识不到线程的存在，即用户级线程对用户不透明，对操作系统透明。
 
 ![用户级线程](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/用户级线程.png)
 
 2. 内核级线程KLT（kernel-level-thread）
 
-内核级线程管理工作由操作系统内核完成。
+	内核级线程管理工作由操作系统内核完成。线程调度、切换等工作都由内核负责，因此内核级线程切换必然需要在核心态下才能完成。
 
 ![内核级线程](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/内核级线程.png)
 
+在同时支持用户级线程和内核级线程的操作系统中，采用二者组合的方式，将n个用户映射到m个内核级线程上。（n >=m )
+
+操作系统只能看得见内核级线程，因此只能内核级线程才是处理机分配的单位。
 
 
+### 多线程模型
 
+在同时支持用户级线程和内核级线程的系统中，由几个用户级线程映射到几个内核级线程的问题引出了“多线程模型问题”
 
+* 多对一模型
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpeg)
+	多个用户级线程映射到一个内核级线程，每个用户进程只对应一个内核级线程。
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpg)
+	优点：用户级线程的切换在用户空间即可完成，不需要切换到核心态，线程管理的系统开销小，效率高。
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.JPG)
+	缺点：当一个用户级线程被阻塞后，整个进程都会被阻塞，并发度不高，多个线程不可在多核处理机上运行
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.png)
+* 一对一模型：
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.PNG)
+	一个用户级线程映射到一个内核级线程，每个用户进程有与用户级线程同数量的内核级线程。
+
+	优点：当一个线程被阻塞后，别的线程还可以继续执行，并发能力强，多线程可以在多核处理机上并行执行
+
+	缺点：一个用户进程会占用多个内核级线程，线程切换由操作系统内核完成，需要切换到核心态，因此线程管理的成本高，开销大
+
+* 多对多模型
+
+	n个用户级线程映射到m个内核级线程（n>=m)，每个用户进程对应m个内核级线程
+
+	克服了多对一模型并发度不高的缺点，也克服了一对一模型中一个用户进程占用太多内核级线程，开销太大的缺点。
+
 
 
 
