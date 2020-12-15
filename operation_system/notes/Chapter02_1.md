@@ -101,6 +101,26 @@ PCB是进程存在的唯一标志！！！
 
 ![进程状态的转换](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程状态的转换.jpeg)
 
+## 进程控制
+
+进程控制的主要功能是对系统中所有进程实施有效的管理，它具有创建新进程，撤销已有进程，实现进程状态转换功能。
+
+即：实现进程转换 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpeg)
