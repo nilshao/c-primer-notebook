@@ -47,6 +47,7 @@
 
 进程调度（低级调度），就是按照某种算法从就绪队列中选择一个进程为其分配处理机
 
+![进程调度的时机](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程调度的时机.png)
 
 
 
