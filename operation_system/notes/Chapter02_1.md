@@ -137,7 +137,9 @@ PCB是进程存在的唯一标志！！！
 
 ![进程的阻塞和唤醒](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程的阻塞和唤醒.jpeg)
 
+阻塞：运行态到阻塞态；唤醒：阻塞态到运行态
 
+阻塞原语唤醒原语必须成对使用
 
 
 
