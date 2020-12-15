@@ -147,8 +147,9 @@ PCB是进程存在的唯一标志！！！
 
 ![进程通信1](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程通信1.jpeg)
 
+进程通信就是进程之间的信息交换，进程是分配系统资源的单位（包括内存地址空间），因此各进程拥有的内存地址空间相互独立。
 
-
+为了保证安全，一个进程不能直接访问另一个进程的地址空间，但是有时进程之间的通信是必要的
 
 
 
