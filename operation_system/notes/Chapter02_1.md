@@ -69,11 +69,40 @@ PCB是进程存在的唯一标志！！！
 
 ## 进程的特征
 
-![进程的基本特征](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程的基本特征.jpeg)
+![进程的基本特征](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程的基本特征.jpg)
 
+动态性是进程最基本的特征
+
+进程是资源分配，接受调度的基本单位
+
+异步性会导致并发程序执行结果的不确定性
+
+## 进程的状态
+
+进程是运行的一次执行，在这个执行过程中，有时进程正在被CPU处理，有时等待CPU服务，可见进程状态会发生变化，为了方便对各个进程的管理，操作系统需要将进程合理划分为多种状态。
+
+1. **运行状态Running（三种基本状态）：** 占有CPU，在CPU上运行。
+
+    单核处理机环境下，则每一时刻最多只有一个进程处于运行态，双核则可以同时有两个进程处于运行态。。。
+
+2. **就绪态Ready（三种基本状态）：** 已经具备运行条件，但由于没有空闲CPU，暂时不能运行。
+
+    就绪态下进程已经拥有了除处理机之外所有需要的资源，一旦获得处理机，即可立即进入运行态开始运行。
+
+3. **阻塞态（等待态）Waiting/Blocked（三种基本状态）：** 因等待某一事件暂时不能运行。
+
+    等待操作系统分配打印机，读写操作等，由于CPU资源最宝贵，所以处理完别的先再进入就绪态等待
+
+4. **创建态：New** 操作系统需要完成创建进程，操作系统为该进程分配所需的内存空间等系统资源，并为其创建、初始化PCB
+
+5. **终止态：Terminated** 进程运行结束，操作系统需要完成撤销进程相关的工作，完成将分配给进程的资源回收，撤销PCB等操作
+
+## 进程的转换
 
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpeg)
+
+![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpg)
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.JPG)
 
