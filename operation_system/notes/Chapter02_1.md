@@ -97,7 +97,10 @@ PCB是进程存在的唯一标志！！！
 
 5. **终止态：Terminated** 进程运行结束，操作系统需要完成撤销进程相关的工作，完成将分配给进程的资源回收，撤销PCB等操作
 
-## 进程的转换
+## 进程状态的转换
+
+![进程状态的转换](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程状态的转换.jpeg)
+
 
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpeg)
