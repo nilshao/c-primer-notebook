@@ -188,6 +188,8 @@ PCB是进程存在的唯一标志！！！
 
 ![消息传递](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/消息传递.jpeg)
 
+## 线程
+
 
 
 
