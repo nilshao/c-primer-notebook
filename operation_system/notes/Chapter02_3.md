@@ -66,12 +66,25 @@
 
 ![peterson算法](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/peterson算法.png)
 
+遵循了空闲让进，忙则等待，有限等待，但是没有遵循让权等待
 
+## 进程互斥的硬件实现
 
+中断屏蔽，TestAndSet（TS指令，或TSL指令），Swap指令（XCHG指令）
 
+### 中断屏蔽
 
+利用开中断、关中断指令实现（与原语的实现思想相同，即在某进程开始访问临界区到结束访问为止都不允许被中断，也就不能发生进程切换，因此不可能发生两个同时访问临界区的情况）
 
+优点：简单高效
 
+缺点：不适用于多处理机，只适用于操作系统内核进程，不适用于用户进程（因为开中断关中断指令只能运行在内核态，不能让用户随意应用）
+
+### TestAndSet指令
+
+用硬件实现的，执行的过程中不允许被中断，只能一气呵成，
+
+![testandset](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/testandset.png)
 
 
 
