@@ -86,11 +86,15 @@
 
 ![testandset](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/testandset.png)
 
+下面的再看看，补一下文字
 
+![testandset2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/testandset2.png)
 
+缺点：不满足让权等待原则，暂时无法进入临界区的进程会占用CPU并循环执行TSL指令，从而导致“忙等”
 
+### Swap指令
 
-
+![Swap指令](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/Swap指令.png)
 
 
 
