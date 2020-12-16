@@ -26,7 +26,7 @@
 
 ## 进程互斥的软件实现
 
-单标志法，双标志先检查，双标志后检查，peterson算法
+单标志法，双标志先检查，双标志后检查，peterson算法。
 
 每个方法考虑：
 
@@ -38,7 +38,7 @@
 
 ### 单标志法
 
-思想：两个进程在访问完临界区后会把使用临界区的权限转交给另一个进程，也就是说每一个进程进入临界区的权限只能被另一个进程赋予
+思想：两个进程在访问完临界区后会把使用临界区的权限转交给另一个进程，也就是说每一个进程进入临界区的权限只能被另一个进程赋予。
 
 ![单标志法](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/单标志法.png)
 
@@ -58,10 +58,13 @@
 
 ![双标志后检查法](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/双标志后检查法.png)
 
-但是违反了空闲让进
+但是违反了空闲让进和有限等待，两个进程都想进入临界区但是互不相让，可能会产生饥饿现象
 
+### peterson算法
 
+双标志后检查算法中，两个算法互相争抢，peterson算法中，如果双方都争着想进入临界区，那可以让进程主动让对方先使用临界区
 
+![peterson算法](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/peterson算法.png)
 
 
 
