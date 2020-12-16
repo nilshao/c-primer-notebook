@@ -159,8 +159,9 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ![信号量机制实现前驱关系](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/信号量机制实现前驱关系.png)
 
+### 信号量机制实现各种操作总结
 
-
+![信号量机制实现各种操作总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/信号量机制实现各种操作总结.png)
 
 
 
