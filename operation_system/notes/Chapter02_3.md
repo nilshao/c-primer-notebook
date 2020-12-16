@@ -134,12 +134,14 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ### 记录型信号量
 
-用记录型数据结构表示的信号量
+用记录型数据结构表示的信号量（把文字改好后用记录型信号量2
 
 ![记录型信号量](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/记录型信号量.png)
 
+释放资源后，若还有别的进程在等待这种资源，则使用wakeup原语唤醒等待队列中的一个进程，该进程从阻塞态变为就绪态
 
 
+![记录型信号量3](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/记录型信号量3.png)
 
 
 
