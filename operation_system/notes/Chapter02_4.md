@@ -118,6 +118,8 @@
 
 ![银行家算法](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/银行家算法.png)
 
+![银行家算法2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/银行家算法2.png)
+
 
 ### 死锁的检测和解除
 
