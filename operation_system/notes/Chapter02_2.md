@@ -121,6 +121,43 @@ CPU忙碌的时间占比总时间的比例
 
 ![调度算法的评价和指标](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/调度算法的评价和指标.png)
 
+## 各种调度算法
+
+先来先服务（FCFS），短作业优先（SJF），高响应比优先（HRRN）
+
+对于每个算法，考虑：
+
+* 算法思想，算法规则
+
+* 适用于作业调度还是进程调度
+
+* 抢占式，非抢占式
+
+* 优缺点
+
+* 是否会导致饥饿：某进程/作业长时间得不到服务
+
+### First Come First Serve
+
+* 思想，规则：公平，排队，先来先得
+
+* 用于作业/进程调度：用于作业调度时，考虑的是哪个作业先到达后备队列，用于进程调度时，考虑的是哪个进程先到达就绪队列
+
+* 非抢占
+
+* 优点：
+
+* 缺点：
+
+
+![FCFS例题](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/FCFS例题.png)
+
+
+
+
+
+
+
 
 
 
