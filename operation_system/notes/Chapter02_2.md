@@ -151,9 +151,9 @@ CPU忙碌的时间占比总时间的比例
 
 * 是否会导致饥饿：不会
 
-* 例题，计算：
+<!--* 例题，计算：
 
-![FCFS例题](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/FCFS例题.png)
+<!--![FCFS例题](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/FCFS例题.png)-->
 
 ### Shortest Job First
 
@@ -165,19 +165,43 @@ CPU忙碌的时间占比总时间的比例
 
 * SJF和SPF都是非抢占式算法，但是也有抢占式版本：最短剩余时间优先算法（SRTN，shortest remaining time next）
 
-* 优点
+* 优点：平均等待时间，平均周转时间最短
 
-* 缺点
+* 缺点：不公平，对短作业有利，对长作业有力，可能产生饥饿现象。另外，作业/进程的运行时间是由用户提供的，并不一定真实，不一定做到真正的短作业优先。
 
-* 是否会导致饥饿
+* 是否会导致饥饿。会，如果短作业源源不断地来，会使得长作业/进程长时间得不到服务，产生饥饿现象
 
-* 例题
+<!--* 例题-->
 
-![SJF例题](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/SJF例题.png)
+<!--![SJF例题](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/SJF例题.png)-->
 
-![SRTN例题1](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/SRTN例题1.png)
+<!--![SRTN例题1](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/SRTN例题1.png)-->
 
-![SRTN例题2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/SRTN例题2.png)
+<!--![SRTN例题2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/SRTN例题2.png)-->
+
+### Highest Response Ratio Next
+
+* 思想：综合考虑作业/进程的等待时间和要求服务的时间
+
+* 算法规则：每次调度时先计算各个作业/进程的响应比，选择响应比最高的作业/进程为其服务
+
+	响应比=（等待时间+要求服务时间）/要求服务时间
+
+* 用于作业/进程调度：既可以用于作业调度，也可以用于进程调度
+
+* 是否可以抢占：非抢占式算法
+
+* 优点：综合考虑了等待时间和运行时间（要求服务时间），等待时间相同时，要求服务时间短的优先（SJF的优点），要求服务时间相同时，等待时间长的优先（FCFS的优点），对于长作业来说，等待时间长了响应比也会变大，避免了长作业饥饿的问题。
+
+
+* 是否会导致饥饿：不会
+   
+### 三种算法总结
+
+![三种算法总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/三种算法总结.png)
+
+
+
 
 ## 计算机
 
