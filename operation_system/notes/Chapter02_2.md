@@ -175,6 +175,9 @@ CPU忙碌的时间占比总时间的比例
 
 ![SJF例题](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/SJF例题.png)
 
+![SRTN例题1](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/SRTN例题1.png)
+
+![SRTN例题2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/SRTN例题2.png)
 
 ## 计算机
 
