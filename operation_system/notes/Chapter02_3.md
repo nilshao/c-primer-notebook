@@ -227,46 +227,9 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 2. 需要在管程中定义用于访问这些共享数据的“入口”————其实就是一些函数
 
+![管程](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/管程.png)
 
+### 管程总结
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpeg)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpg)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.JPG)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.png)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.PNG)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![管程总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/管程总结.png)
 
