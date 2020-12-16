@@ -116,15 +116,28 @@
 
 原语是一种特殊的程序段，其执行不能被中断，只能一气呵成。原语是由开中断/关中断指令实现的，软件解决方案的主要问题是由“进入区的各种操作无法一气呵成”。因此如果能把进入区、退出区的操作都用“原语”实现，使这些操作能“一气呵成”就能避免问题
 
-一对原语：wait（S）和signal（S），也被写为P（S）和V（S）
+一对原语：wait(S)和signal(S)，也被写为P(S)和V(S)
 
-wait（）和signal（）是自己写的函数，S就是信号量
+wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ### 整形信号量
 
-整形信号量，用来表示系统中某种资源的数量，如系统中有一台计算机
+整形信号量，用来表示系统中某种资源的数量，如系统中有一台计算机 S为1
 
 ![整形信号量](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/整形信号量.png)
+
+对信号量的操作只有三种：初始化，P操作和V操作
+
+检查和上锁作为原语一气呵成，避免并发、异步导致的问题
+
+问题：不满足让权等待原则，会发生忙等
+
+### 记录型信号量
+
+用记录型数据结构表示的信号量
+
+![记录型信号量](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/记录型信号量.png)
+
 
 
 
