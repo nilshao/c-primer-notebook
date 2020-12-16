@@ -1,10 +1,7 @@
-# 第二章 第三节 进程同步
+# 第二章 第三节 处理机调度
 
-## 进程同步
+## 
 
-回顾：进程有异步性的特征，各并发执行的进程以各自独立，不可预知的速度向前推进。
-
-![进程同步问题](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程同步问题.png)
 
 
 
