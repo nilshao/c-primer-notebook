@@ -96,7 +96,13 @@
 
 ![Swap指令](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/Swap指令.png)
 
+优点：实现简单，无需像软件实现方法那样严格检查是否会有逻辑漏洞，适用于多处理机环境
 
+缺点：不满足“让权等待”，暂时无法进入临界区的进程会占用CPU并循环执行TSL指令，从而导致“忙等”
+
+### 总结
+
+![进程互斥的硬件实现总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程互斥的硬件实现总结.png)
 
 
 
