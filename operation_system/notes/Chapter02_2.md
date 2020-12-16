@@ -145,20 +145,35 @@ CPU忙碌的时间占比总时间的比例
 
 * 非抢占
 
-* 优点：
+* 优点：公平、算法实现简单
 
-* 缺点：
+* 缺点：排在长作业（进程）后面的短作业需要等待很长时间，带权周转时间很大，对短作业来说用户体验不好，即，FCFS算法对长作业有利，对短作业不利
 
+* 是否会导致饥饿：不会
+
+* 例题，计算：
 
 ![FCFS例题](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/FCFS例题.png)
 
+### Shortest Job First
 
+* 思想，规则：追求最少的平均等待时间，最少的平均周转时间，最少的平均带权周转时间
 
+* 算法规则：最短的作业/进程优先得到服务（要求服务时间最短）
 
+* 用于作业/进程调度：既可以用于作业调度，又可以进程调度，用于进程调度时称为短进程优先（SPF，shortest process first）
 
+* SJF和SPF都是非抢占式算法，但是也有抢占式版本：最短剩余时间优先算法（SRTN，shortest remaining time next）
 
+* 优点
 
+* 缺点
 
+* 是否会导致饥饿
+
+* 例题
+
+![SJF例题](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/SJF例题.png)
 
 
 ## 计算机
