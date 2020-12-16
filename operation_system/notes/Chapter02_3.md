@@ -143,6 +143,42 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ![记录型信号量3](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/记录型信号量3.png)
 
+### 信号量机制实现互斥
+
+使用临界资源之前要加锁，使用临界资源后要解锁。对不同临界资源的使用需要设置不同的互斥信号量。P操作V操作必须成对使用
+
+### 信号量机制实现同步
+
+“让各个并发进程有序地推进”
+
+![信号量机制实现同步](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/信号量机制实现同步.png)
+
+![信号量机制实现同步2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/信号量机制实现同步2.png)
+
+### 信号量机制实现前驱关系
+
+![信号量机制实现前驱关系](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/信号量机制实现前驱关系.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
