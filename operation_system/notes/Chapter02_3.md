@@ -219,8 +219,13 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ![用管程解决生产者消费者问题](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/用管程解决生产者消费者问题.png)
 
+由编译器负责实现各进程互斥地进入管程中的过程
 
+### 实现互斥和同步
 
+1. 需要在管程中定义共享数据（如缓冲区）
+
+2. 需要在管程中定义用于访问这些共享数据的“入口”————其实就是一些函数
 
 
 
