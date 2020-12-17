@@ -95,10 +95,29 @@
 
 3. 换出哪些进程？
 
+（补全文字）
+
+![交换技术](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/交换技术.jpeg)
 
 1. 具有兑换功能的操作系统中，通常把磁盘空间分为文件区和对换区
 
-![交换技术](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/交换技术.jpeg)
+2. 
+
+3. 
+
+但是pcb会常驻内存，不会被换出外存
+
+## 连续分配式管理
+
+连续分配：为用户进程分配的必须是一个连续的内存空间
+
+### 单一连续分配
+
+![单一连续分配](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/单一连续分配.jpeg)
+
+
+### 固定分区分配
+
 
 
 
