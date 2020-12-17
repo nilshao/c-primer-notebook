@@ -76,15 +76,29 @@
 
 思想：把程序分为多个段（多个模块）。常用的段常驻内存，不常用的段在需要时放入内存。需要常驻内存的段放在固定区，不常用的段放在覆盖区。内存中分为一个固定区和多个覆盖区。
 
-
 ![覆盖技术](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/覆盖技术.jpeg)
 
+### 交换技术
+
+内存空间紧张时，系统将内存中某些进程暂时换出到外存，把外存中某些已具备运行条件的进程换入到内存
 
 
+暂时换出到外存等待的进程状态为挂起状态suspend
+
+挂起状态可进一步细分为就绪挂起和阻塞挂起
+
+问题：
+
+1. 应该在外存的什么位置保存被换出的进程？
+
+2. 什么时候交换？
+
+3. 换出哪些进程？
 
 
+1. 具有兑换功能的操作系统中，通常把磁盘空间分为文件区和对换区
 
-
+![交换技术](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/交换技术.jpeg)
 
 
 
