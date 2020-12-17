@@ -145,17 +145,22 @@
 
 ![死锁的检测3](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/死锁的检测3.png)
 
-![死锁的检测4](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/死锁的检测4.png)
+### 死锁的解除
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpeg)
+一旦检测出死锁的发生，就应该立即解除死锁，并不是系统中所有的进程都是死锁状态，用死锁检测算法简化资源分配图后，还连着边的那些进程就是死锁进程
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpg)
+解除死锁的主要方法：
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.JPG)
+1. 资源剥夺法：挂起（暂时放到外存上）某些死锁进程，并抢占它的资源，将这些资源分配给其他的死锁进程。但是应防止被挂起的进程长时间得不到资源而饥饿。
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.png)
+2. 撤销进程法：强制撤销部分甚至全部 死锁的进程。简单但是代价太大。
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.PNG)
+3. 进程回退法：让一个或多个死锁进程退回到足以避免死锁的地步，这就要求系统要记录进程的历史信息，设置还原点，算法麻烦。
+
+如何决定对谁执行操作：
+
+进程优先级，已执行的时间，还要多久能完成，进程已经使用了多少资源，进程是交互式还是批处理式
+
 
 
 
