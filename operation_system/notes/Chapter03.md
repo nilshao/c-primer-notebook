@@ -19,7 +19,12 @@
 
 ![指令](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/指令.jpeg)
 
+相对地址=逻辑地址，绝对地址=物理地址
 
+
+### 从写程序到运行
+
+![从写程序到运行](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/从写程序到运行.jpeg)
 
 
 
