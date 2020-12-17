@@ -121,18 +121,31 @@
 ![银行家算法2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/银行家算法2.png)
 
 
-### 死锁的检测和解除
+## 死锁的检测和解除
 
+1. 死锁的检测算法
 
+检测系统状态，以确定系统是否发生了死锁
 
+2. 死锁的解除算法
 
+当认定系统中已经发生了死锁，利用该算法可将系统从死锁状态中解脱出来
 
+### 死锁的检测
 
+为了能对系统是否发生了死锁进行检测，必须：
 
+1. 用某种数据结构来保存资源的请求和分配信息
 
+2. 提供一种算法，利用上述信息来检测系统是否已进入死锁状态
 
+![死锁的检测1](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/死锁的检测1.png)
 
+![死锁的检测2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/死锁的检测2.png)
 
+![死锁的检测3](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/死锁的检测3.png)
+
+![死锁的检测4](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/死锁的检测4.png)
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/.jpeg)
 
