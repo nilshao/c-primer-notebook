@@ -72,10 +72,12 @@
 
 ![覆盖和交换](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/覆盖和交换.jpeg)
 
+### 覆盖技术
+
+思想：把程序分为多个段（多个模块）。常用的段常驻内存，不常用的段在需要时放入内存。需要常驻内存的段放在固定区，不常用的段放在覆盖区。内存中分为一个固定区和多个覆盖区。
 
 
-
-
+![覆盖技术](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/覆盖技术.jpeg)
 
 
 
