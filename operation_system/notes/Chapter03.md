@@ -235,7 +235,7 @@
 
 进程未执行时，页表的起始地址和页表长度放在进程控制模块PCB中，进程被调度时，操作系统内核会把它们放到页表寄存器中。
 
-![基本地址变换机构](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/基本地址变换机构.png)
+![ç](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/基本地址变换机构.png)
 
 
 
