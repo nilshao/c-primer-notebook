@@ -219,6 +219,26 @@
 4. 物理地址 = 页面地址 + 页内偏移量
 
 
+### 页表
+
+为了能知道进程的每个页面在内存中存放的位置，操作系统要为每个进程建立一张页表
+
+![页表](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/页表.jpeg)
+
+每个页表项的长度是相同的，页号是隐含的。（说不明白就不要说）
+
+## 基本地址变换机构
+
+用于实现逻辑地址到物理地址转换的一组硬件结构。可以借助进程的页表将逻辑地址转换为物理地址。
+
+通常会在系统中设置一个页表寄存器（PTR），存放页表在内存中的起始地址F和页表长度M。
+
+进程未执行时，页表的起始地址和页表长度放在进程控制模块PCB中，进程被调度时，操作系统内核会把它们放到页表寄存器中。
+
+![基本地址变换机构](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/基本地址变换机构.png)
+
+
+
 
 
 
