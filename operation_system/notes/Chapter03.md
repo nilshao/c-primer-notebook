@@ -235,16 +235,24 @@
 
 进程未执行时，页表的起始地址和页表长度放在进程控制模块PCB中，进程被调度时，操作系统内核会把它们放到页表寄存器中。
 
-![ç](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/基本地址变换机构.png)
+![基本地址变换机构](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/基本地址变换机构.png)
 
+ 
+![基本地址变换机构总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/基本地址变换机构总结.png)
 
+## 具有块表的地址变换结构
 
+“局部性”原理：
 
+时间局部性：如果执行了程序中的某条指令，那么不久后这条指令很可能再次执行，如果某个数据被访问后，不久后这个数据很可能会被再次访问
 
+空间局部性：一旦程序访问了某个存储单元，不久之后其附近的存储单元可能也被访问（因为很多数据在内存之中都是连续存放的） 
 
+因此在之前的基本地址变换机构中，可能连续很多次查询同一个页表项
 
+快表：
 
-
+又称联想寄存器，是一种访问速度比内存快很多的高速缓冲存储器，用来存放当前访问的若干页表项，以加速地址变换的过程。与此相对，内存中的页表称为慢表
 
 
 
