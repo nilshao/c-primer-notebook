@@ -180,6 +180,26 @@
 
 将物理磁盘分为一个个文件卷
 
+![存储空间的划分和初始化](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/存储空间的划分和初始化.png)
+
+### 存储空间管理：空闲表法
+
+分配磁盘块：首次适应，最佳适应，最坏适应法
+
+回收磁盘块：和内存管理一样，也要注意表项的合并
+
+### 存储空间管理：空闲链表法
+
+空闲盘块链：以盘块为单位组成一条空闲链
+
+空闲盘区链：以盘区为单位
+
+盘区：连续的空闲 盘块组成一个空闲盘区
+
+### 存储空间管理：位示图法
+
+
+
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.png)
 
