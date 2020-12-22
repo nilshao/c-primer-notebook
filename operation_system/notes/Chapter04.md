@@ -176,7 +176,9 @@
 
 ![文件存储空间管理](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/文件存储空间管理.png)
 
+### 存储空间的划分和初始化
 
+将物理磁盘分为一个个文件卷
 
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.png)
