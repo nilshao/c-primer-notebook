@@ -79,10 +79,29 @@
 
 ### 索引顺序文件
 
-索引文件的缺点：每个记录都对应一个索引表项，因此索引表可能太大。改进：**一组记录**对应一个索引表项，“分组的思想”
+索引文件的缺点：每个记录都对应一个索引表项，因此索引表可能太大。改进：**一组记录**对应一个索引表项，“分组的思想”。减少存储消耗，也减少了查找次数，直接在不重复的索引项里找就可以了，索引文件的索引表很多重复。
+
+也可以继续建立多级索引表，成为**多级索引顺序文件**。
+
+## 文件目录
+
+![文件目录](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/文件目录.png)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.png)
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.jpeg)
 
