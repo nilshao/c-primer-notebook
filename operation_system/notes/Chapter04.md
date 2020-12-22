@@ -166,9 +166,15 @@
 
 2. 多层索引
 
+3. 混合索引 
 
+### 总结
 
+![总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/总结.png)
 
+## 文件存储空间管理
+
+![文件存储空间管理](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/文件存储空间管理.png)
 
 
 
