@@ -198,6 +198,37 @@
 
 ### 存储空间管理：位示图法
 
+![位示图法](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/位示图法.png)
+
+0代表盘块空闲，1表示以分配
+
+
+### 存储空间管理：成组链接法
+
+linux采用的管理方式。
+之前的策略组合起来，超级块：
+
+### 总结
+
+![存储空间管理总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/存储空间管理总结.png)
+
+## 文件的基本操作
+
+创建文件，删除文件，写文件，读文件，打开文件，关闭文件
+
+### 创建文件：
+
+![创建文件](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/创建文件.png)
+
+### 删除文件
+
+![删除文件](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/删除文件.png)
+
+### 写文件
+
+![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.png)
+
+### 打开文件
 
 
 
