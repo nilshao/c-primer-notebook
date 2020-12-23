@@ -26,7 +26,7 @@ Unix系统将外部设备抽象为一种特殊的文件，用户可以使用与�
 
 IO控制器和CPU的接口，IO逻辑，控制器和设备的接口。
 
-
+![IO控制器的组成](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter5/IO控制器的组成.jpeg)
 
 
 
