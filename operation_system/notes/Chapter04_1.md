@@ -287,17 +287,8 @@ linux采用的管理方式。
 
 ## 文件系统的层次结构
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.png)
+![文件系统的层次结构](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/文件系统的层次结构.png)
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.jpeg)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.jpg)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.JPG)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.png)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.PNG)
 
 
 
