@@ -226,9 +226,37 @@ linux采用的管理方式。
 
 ### 写文件
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.png)
+![写文件](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/写文件.png)
 
 ### 打开文件
+
+![打开文件](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/打开文件.png)
+
+### 关闭文件
+
+![关闭文件](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/关闭文件.png)
+
+### 读文件
+
+![读文件](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/读文件.png)
+
+### 总结
+
+![文件操作总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/文件操作总结.png)
+
+## 文件共享
+
+![文件共享](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/文件共享.png)
+
+### 基于索引的共享方式
+
+回顾：索引结点
+
+索引结点中设置一个链接计数变量count
+
+### 基于链接的共享方式
+
+快捷方式，链接一个路径信息
 
 
 
