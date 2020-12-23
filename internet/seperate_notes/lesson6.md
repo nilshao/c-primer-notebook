@@ -301,23 +301,22 @@ HTTP数据传输过程中所有的数据都是明文传输，容易被窃听截�
 在http的基础上通过传输加密和身份认证保证了传输过程的安全性，原理：在http的基础上加入ssl（安全套接层）层或者TLS（安全传输层协议），混合加密。混合加密是指对称加密（解密加密都是同一个密钥，密钥管理负担问题，密钥也被截获的问题）和非对称加密（公钥私钥）。
 
 
-![https和http关系](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter5/https和http关系.jpeg)
+![https和http关系](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter5/http1s和http关系.jpeg)
 
 #### 过程
 
 
-![https](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter5/https.jpeg)
+![https](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter5/http1s.jpeg)
 
 
 1. 首先客户端通过URL访问服务器建立SSL连接。
-2. 服务端收到客户端请求后，会将网站支持的证书信息（证书中包含公钥）传送一份给客户端。
-颁发证书的时候会产生私钥和公钥，私钥保存在服务端，不能泄露，公钥附带在证书信息中。
-3. 客户端的服务器开始协商SSL连接的安全等级，也就是信息加密的等级。
-4. 客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站。
-5. 服务器利用自己的私钥解密出会话密钥。
-6. 服务器利用会话密钥加密与客户端之间的通信
-
-
+2. 采用HTTPS的服务器要有一套CA证书，颁发证书的时候会产生私钥和公钥，私钥保存在服务端，不能泄露，公钥附带在证书信息中。
+3. 服务端收到客户端请求后，会将网站支持的证书信息（证书中包含公钥）传送一份给客户端。
+4. 客户端解析证书并对其验证，如果证书没问题，客户端就会从服务器证书中取出服务器的公钥A，然后客户端还会生成一个随机码KEY，并用公钥A加密
+5. 客户端把加密后的随机码KEY发送给服务器，作为后面对称加密的密钥
+6. 服务器在收到随机码KEY之后使用私钥对其解密，经过以上步骤建立了安全链接，并解决了密钥泄露
+7. 服务器使用密钥key对数据进行对称加密，客户端使用key对称解密
+8. 正常通信
 
 
 
