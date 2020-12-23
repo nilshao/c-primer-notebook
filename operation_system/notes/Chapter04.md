@@ -258,6 +258,27 @@ linux采用的管理方式。
 
 快捷方式，链接一个路径信息
 
+![文件共享总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/文件共享总结.png)
+
+## 文件保护
+
+口令保护，加密保护
+
+### 口令保护
+
+为文件设置一个口令，用户请求访问该文件时需要提供口令，口令一般存在FCB或者索引结点中
+
+优点：空间开销不多，验证口令的时间开销也很小
+
+缺点：口令存放在系统中，不安全
+
+### 加密保护
+
+为文件设置密码。如异或加密。
+
+![加密保护](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/加密保护.png)
+
+
 
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.png)
