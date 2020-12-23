@@ -16,7 +16,15 @@
 
 ![磁盘的物理地址](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/磁盘的物理地址.jpeg)
 
+### 磁盘的分类
 
+活动头磁盘，固定头磁盘：这种磁盘中每个磁道都有对应的磁头
+
+可换盘磁盘，固定盘磁盘
+
+## 磁盘调度算法
+
+![磁盘调度算法](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/磁盘调度算法.jpeg)
 
 
 
