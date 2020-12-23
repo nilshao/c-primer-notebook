@@ -83,60 +83,29 @@ SCAN算法对于各个位置磁道的响应频率不均，C-SCAN只在磁头朝�
 
 ### 错位命名
 
-
 ### 磁盘地址结构的设计
 
 ### 总结
 
-
-
+![减少延迟时间的方法](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/减少延迟时间的方法.jpeg)
 
 ## 磁盘的管理
 
+磁盘的管理：磁盘初始化，引导块，坏块的管理
 
+### 磁盘初始化
 
+1. 低级格式化（物理格式化），将磁盘的各个磁道划分为扇区，一个扇区常分为头、数据区、尾三个部分。
 
+2. 将磁盘分区，每个分区由若干柱面组成（c盘，d盘，e盘等）
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.jpeg)
+3. 进行逻辑格式化，创建文件系统
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.png)
+### 引导块
 
+自举程序：计算机开机时需要通过执行初始化程序（自举程序）完成。ROM中存放很小的自举程序。完整的自举程序放在磁盘的启动块（引导块/启动分区）上，启动块位于磁盘的固定位置。
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.jpg)
+### 坏块的管理
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.JPG)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.png)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/.PNG)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+无法正常使用的扇区就是坏块，硬件故障，操作系统无法修复，因此需要标记出来。磁盘控制器会维护一个坏块链表，并管理备用扇区。
 
