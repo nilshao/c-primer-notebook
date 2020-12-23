@@ -294,7 +294,7 @@ hyper text transfer protocol over securesocket layer
 
 HTTP数据传输过程中所有的数据都是明文传输。
 
-在http的基础上通过传输加密和身份认证保证了传输过程的安全性，原理：在http的基础上加入ssl层，混合加密。混合加密是指对称加密（解密加密都是同一个密钥，密钥管理负担问题，密钥也被截获的问题）和非对称加密（公钥私钥）。
+在http的基础上通过传输加密和身份认证保证了传输过程的安全性，原理：在http的基础上加入ssl（安全套接层）层或者TLS（安全传输层协议），混合加密。混合加密是指对称加密（解密加密都是同一个密钥，密钥管理负担问题，密钥也被截获的问题）和非对称加密（公钥私钥）。
 
 
 ![https和http关系](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter5/https和http关系.jpeg)
