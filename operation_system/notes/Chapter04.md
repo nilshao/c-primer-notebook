@@ -262,7 +262,7 @@ linux采用的管理方式。
 
 ## 文件保护
 
-口令保护，加密保护
+口令保护，加密保护，访问控制
 
 ### 口令保护
 
@@ -277,6 +277,11 @@ linux采用的管理方式。
 为文件设置密码。如异或加密。
 
 ![加密保护](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/加密保护.png)
+
+### 访问控制
+
+在每个文件的fcb或索引结点增加一个访问控制表（access control list），该表中记录了每个用户可以对该文件执行哪些操作（权限）。
+
 
 
 
