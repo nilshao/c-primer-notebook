@@ -189,7 +189,7 @@ or奈氏准则：在理想低通（无噪声，带宽受限）的条件下，为
 
 ### 数字数据调制为模拟信号
 
-调制，解调
+发送端将数字信号调制为模拟信号：调制，接收端将模拟信号解调为数字信号：解调
 
 ![数字数据调制为模拟信号](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter02/数字数据调制为模拟信号.PNG)
 
@@ -202,7 +202,8 @@ or奈氏准则：在理想低通（无噪声，带宽受限）的条件下，为
 
 一般是数字音频
 
-（图片）
+![模拟数据编码为数字信号](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter02/模拟数据编码为数字信号.JPG)
+
 
 #### 模拟信号调制为模拟信号
 
