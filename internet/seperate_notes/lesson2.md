@@ -162,13 +162,14 @@ or奈氏准则：在理想低通（无噪声，带宽受限）的条件下，为
 
 信道：信号的传输媒介。一般用来表示向某一个方向传送信息的介质，因此一条通信线路往往包含一条发送信道和一条接收信道。
 
-![基带信号宽带信号](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter02/基带信号宽带信号.JPG)
+
 
 #### 编码与调制
 
 数据 -> 数字信号：编码
 
 数据 -> 模拟信号：调制
+![基带信号宽带信号](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter02/基带信号宽带信号.JPG)
 
 #### 数字数据编码为数字信号
 图片
