@@ -252,6 +252,8 @@ or奈氏准则：在理想低通（无噪声，带宽受限）的条件下，为
 
 ![单模光纤多模光纤](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter02/单模光纤多模光纤.png)
 
+单模光纤几乎相当于直线传播，光纤直径减少到波长
+
 光纤特点：
 
 1. 传输损耗小，中继距离长，对远距离传输特别经济
