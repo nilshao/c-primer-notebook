@@ -28,8 +28,8 @@
 
 ### 数据通信基础知识
 
-典型的数据通信模型（图片
-
+典型的数据通信模型
+![典型的数据通信模型](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter02/典型的数据通信模型.JPG)
 
 #### 相关术语：
 
