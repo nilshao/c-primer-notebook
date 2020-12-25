@@ -268,23 +268,26 @@ SR：发送窗口大小 > 1，接收窗口大小 > 1
 
 ACK：确认帧（1bit的1和0编号就够）
 
-![停等协议有差错ack丢失](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/停等协议有差错ack丢失.JPG)
 
 1. 数据帧丢失或检测到帧出错
 
-![avatar](http://baidu.com/pic/doge.png)
+![数据帧丢失或检测到帧出错](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/数据帧丢失或检测到帧出错.JPG)
 
-（图片）RTT：往返传播时延round trip time
+RTT：往返传播时延round trip time
 
 2. ACK丢失
 
-（图片）![avatar](http://baidu.com/pic/doge.png)
+![停等协议有差错ack丢失](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/停等协议有差错ack丢失.JPG)
 
 3. ACK迟到
 
-#### 性能分析
+![ACK迟到](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/ACK迟到.JPG)
 
-![avatar](http://baidu.com/pic/doge.png)
+
+### 性能分析
+
+![停等协议性能分析](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/停等协议性能分析.JPG)
+
 
 简单，信道利用率太低（图片），大部分时间都在路上
 
