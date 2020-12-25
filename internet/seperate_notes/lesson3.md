@@ -286,12 +286,12 @@ RTT：往返传播时延round trip time
 
 ### 性能分析
 
-![停等协议性能分析](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/停等协议性能分析.JPG)
+![停等协议性能分析](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/停等协议性能分析.png)
 
 
-简单，信道利用率太低（图片），大部分时间都在路上
+简单，信道利用率太低，但大部分时间都在路上
 
-### 信道利用率信道吞吐率
+**信道利用率信道吞吐率**
 
 发送方在一个周期内有效地发送数据所需要的时间占整个发送周期的比率
 
@@ -299,7 +299,7 @@ RTT：往返传播时延round trip time
 
 T内发送L比特数据；发送周期T：从开始发送数据，到收到第一个确认帧为止；C：发送方数据传输率
 
-*信道吞吐率* = 信道利用率*发送方的发送速率
+**信道吞吐率** = 信道利用率*发送方的发送速率
 
 （例题图片![avatar](http://baidu.com/pic/doge.png)
 
