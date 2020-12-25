@@ -248,7 +248,7 @@ or奈氏准则：在理想低通（无噪声，带宽受限）的条件下，为
 ![光纤](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter02/光纤.JPG)
 
 
-单模光纤，多模光纤（图片
+单模光纤，多模光纤
 
 ![单模光纤多模光纤](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter02/单模光纤多模光纤.png)
 
