@@ -309,7 +309,7 @@ T内发送L比特数据；发送周期T：从开始发送数据，到收到第�
 ![停等协议性能分析](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/停等协议性能分析.JPG)
 
 
-## 选择重传协议SR
+## 滑动窗口：选择重传协议SR
 
 Selective Repeat：可不可以只重传出错的帧？
 
@@ -339,13 +339,13 @@ SR：设置单个确认，同时加大接收窗口，设置接收缓存，缓存
 
 ### 接收方要做的事
 
-SR接收方将确认一个正确接收的帧而不管其是否按序。失序的帧将被缓存，并返回给发送方一个该帧的确认帧（收谁确认谁），
+SR接收方将确认一个正确接收的帧而**不管其是否按序**。失序的帧将被缓存，并返回给发送方一个该帧的确认帧（收谁确认谁），
 直到所有帧（即序号更小的帧）都被收到为止，这时才可以将一批帧按序交付给上层，然后向前移动滑动窗口。
 
 ### 运行中的SR
 
-（图片
-![avatar](http://baidu.com/pic/doge.png)
+![运行中的SR](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/运行中的SR.JPG)
+
 
 ### 滑动窗口长度
 
