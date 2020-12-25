@@ -447,7 +447,7 @@ con：在重传时必须把原来已经正确传送的数据帧批量重传，�
 
 ### 什么是信道划分介质访问控制
 
-信道划分介质访问控制：MAC multiple access control（再查查，先不要说）
+信道划分介质访问控制：MAC multiple access control
 
 信道划分介质访问控制：将使用介质的每个设备与来自同一信道上的其他设备的通信隔离开，
 把**时域**和**频域**资源合理地分配给网络上的设备。
@@ -458,14 +458,14 @@ con：在重传时必须把原来已经正确传送的数据帧批量重传，�
 
 分用：把一条广播信道，逻辑上分成几条用于两个节点之间通信的互不干扰的子信道，实际就是把广播信道转化为点对点信道。
 
-### 静态信道划分
+## 静态信道划分
 
 频分多路复用FDM，时分多路复用TDM，波分多路复用WDM，码分多路复用CDM
 
 + 频分复用：不同用户在同样的时间占用不同的带宽。充分利用传输介质带宽，系统效率较高；由于技术比较成熟，实现也比较容易。
-（图片
 
-![avatar](http://baidu.com/pic/doge.png)
+![频分多路复用fdm](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/频分多路复用fdm.JPG)
+
 
 + 时分复用：一个周期中各个用户占有一个*固定序号*的时隙。
 
@@ -477,7 +477,8 @@ con：在重传时必须把原来已经正确传送的数据帧批量重传，�
 
 + 码分多路复用：码分多址（CDMA）是码分复用的一种方式。m一般为64或128。这里的8是方便讲解（图片）（自己再查一下）
 
-![avatar](http://baidu.com/pic/doge.png)
+![码分多路复用cdm](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/码分多路复用cdm.JPG)
+
 
 #### 动态分配信道 ALOHA协议
 
