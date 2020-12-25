@@ -51,7 +51,7 @@
 
 + 四种方法：字符计数法，字符（字节）填充法，零比特填充法，违规编码法
 
-（图片）![avatar](http://baidu.com/pic/doge.png)
+![封装成帧](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/封装成帧.JPG)
 
 #### 透明传输
 
