@@ -271,7 +271,7 @@ ACK：确认帧（1bit的1和0编号就够）
 
 1. 数据帧丢失或检测到帧出错
 
-![数据帧丢失或检测到帧出错](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/数据帧丢失或检测到帧出错.JPG)
+![数据帧丢失或检测到帧出错](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/数据帧丢失或检测到帧出错.png)
 
 RTT：往返传播时延round trip time
 
@@ -281,7 +281,7 @@ RTT：往返传播时延round trip time
 
 3. ACK迟到
 
-![ACK迟到](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/ACK迟到.JPG)
+![ACK迟到](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/ACK迟到.png)
 
 
 ### 性能分析
@@ -291,7 +291,7 @@ RTT：往返传播时延round trip time
 
 简单，信道利用率太低（图片），大部分时间都在路上
 
-#### 信道利用率信道吞吐率
+### 信道利用率信道吞吐率
 
 发送方在一个周期内有效地发送数据所需要的时间占整个发送周期的比率
 
