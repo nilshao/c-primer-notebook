@@ -53,21 +53,27 @@
 
 ![封装成帧](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/封装成帧.JPG)
 
-#### 透明传输
+### 透明传输
 
-透明传输是指不管所传数据是什么样的比特组合都应该能够在链路上传送。因此链路层就“看不见”有什么妨碍数据传输的东西。
+透明传输是指*不管所传数据是什么样的比特组合*都应该能够在链路上传送。因此链路层就“看不见”有什么妨碍数据传输的东西。
 
-当所传数据中比特组合恰好与某个控制信息完全一样时，就必须采取适当的措施，使得接收方不会将这样的数据误认为是某种控制信息，这样才能保证数据链路层的传输是透明的。
+当所传数据中*比特组合恰好与某个控制信息完全一样*时，就必须采取适当的措施，使得接收方不会将这样的数据误认为是某种控制信息，这样才能保证数据链路层的传输是透明的。
+
+透明传输的应用：
 
 #### 字符计数法
 
 帧首部用一个计数字段（第一个字节，八位）来标明帧内字符数。
 
+![字符计数法](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/字符计数法.JPG)
+
+
 #### 字符填充法
 
 帧的三个部分：
 
-（图片![avatar](http://baidu.com/pic/doge.png)
+![字符填充法](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/字符填充法.JPG)
+
 
 + SOH（start of header）00000001
 
