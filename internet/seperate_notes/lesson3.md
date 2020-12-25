@@ -84,7 +84,8 @@
 应用：传送文件是由文本文件组成时（文本文件字符都是从键盘上输入的，可用ascii码表达）。当传送的帧是由非ascii码的文本文件组成时（程序/图像等）就不行。可能在
 信息中有和eot字段相同的组合，这时候就要采用字符填充的方法实现透明传输。
 
-（图片![avatar](http://baidu.com/pic/doge.png)
+![字符填充法_发送接收](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/字符填充法_发送接收.JPG)
+
 
 在与eot相同的字段前加转义字符esc作为字节填充，与转义字符esc相同的前面也要添加
 
