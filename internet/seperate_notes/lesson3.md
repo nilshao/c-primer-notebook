@@ -317,9 +317,9 @@ SR：设置单个确认，同时加大接收窗口，设置接收缓存，缓存
 
 ### 选择重传协议中的滑动窗口
 
-（图片![avatar](http://baidu.com/pic/doge.png)
+![选择重传中的滑动窗口](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/选择重传中的滑动窗口.JPG)
 
-注意上下例子是分开的，不是同一个时序
+（注意上下例子是分开的，不是同一个时序中）
 
 ### SR发送方必须相应的三件事
 
