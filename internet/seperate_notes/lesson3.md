@@ -154,7 +154,7 @@
 
 #### CRC循环冗余码
 
-![crc接收端捡错](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/crc接收端捡错.JPG)
+![crc接收端检错](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/crc接收端检错.JPG)
 
 
 最终发送的数据是要发送的数据+帧检验数列FCS
