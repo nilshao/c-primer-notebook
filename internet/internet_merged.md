@@ -1173,6 +1173,8 @@ con：在重传时必须把原来已经正确传送的数据帧批量重传，�
 
 + 改进的时分复用————统计时分复用STDM：**集中器**按需动态分配时隙。
 
+![统计时分复用stdm](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/统计时分复用stdm.JPG)
+
 + 波分多路复用：**光**的频分多路复用。
 
 ![波分多路复用wdm](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/波分多路复用wdm.JPG)
@@ -1590,46 +1592,57 @@ HDLC，PPP都只支持全双工链路，都可以实现透明传输。都可以�
 
 ## 链路层设备
 
-#### 物理层扩展以太网
+### 物理层扩展以太网
 
 光纤（光纤调制器，光纤解调器）。集线器（集线器下的计算机们构成冲突域，只能同时有一个设备发送；主干集线器）
 
-#### 链路层扩展以太网
+![物理层扩展以太网](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/物理层扩展以太网.JPG)
 
-网桥或称交换机（在看一次）
+### 链路层扩展以太网
+
+网桥或称交换机（!!!在看看一次）
+
+![网桥交换机](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/网桥交换机.JPG)
 
 把冲突域分隔开
 
-**网段**
+**网段** 同一“物理层设备”
 
-##### 透明网桥
+### 透明网桥
 
 透明 是指以太网上的站点并不知道所发送的帧将经过哪几个网桥，是一种即插即用设备（自学习）
-（todo——[透明网桥](http://baidu.com/pic/doge.png)
+
+![透明网桥转发表](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/透明网桥转发表.jpeg)
 
 
-##### 源路由网桥
 
-在发送帧的时候把详细的最佳路由信息（路由最少/时间最短）放在帧的首部中
+### 源路由网桥
+
+在发送帧的时候把详细的**最佳**路由信息（路由最少/时间最短）放在帧的首部中
 
 方法： 源站以广播的方式向欲通信的目的站发送一个发现帧。（看看别的资料）
 
-##### 多接口网桥————以太网交换机
+### 多接口网桥————以太网交换机
 
 可以独占传输媒体带宽
 
-##### 以太网交换机的两种交换方式
+![多接口网桥](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/多接口网桥.jpeg)
+
+### 以太网交换机的两种交换方式
 
 **直通式交换机** 查完目的地址（6B）就立刻转发。延迟小，可靠性低，无法支持具有不同速率的端口的交换。
 
 **存储转发式交换机** 将帧放入高速缓存，并检查是否正确，正确则转发，错误则丢弃。延迟大，可靠性高，可以支持具有不同速率的端口的交换。
 
-##### 冲突域和广播域
+### 冲突域和广播域
 
-![冲突域和广播域](https://github.com/nilshao/cpp-notebook/blob/master/internet/pictures/%E5%86%B2%E7%AA%81%E5%9F%9F%E5%B9%BF%E6%92%AD%E5%9F%9F.JPG)
+![冲突域和广播域](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/冲突域和广播域.JPG)
 
 链路域设备（交换机） 每个接口分割一个冲突域。
 
+![冲突域和广播域练习](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/冲突域和广播域练习.jpeg)
+
+4个冲突域和1个广播域
 
 
 
