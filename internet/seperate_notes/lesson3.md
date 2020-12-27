@@ -941,6 +941,9 @@ HDLC，PPP都只支持全双工链路，都可以实现透明传输。都可以�
 
 链路域设备（交换机） 每个接口分割一个冲突域。
 
+![冲突域和广播域练习](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/冲突域和广播域练习.jpeg)
+
+4个冲突域和1个广播域
 
 
 
