@@ -913,7 +913,7 @@ HDLC，PPP都只支持全双工链路，都可以实现透明传输。都可以�
 
 透明 是指以太网上的站点并不知道所发送的帧将经过哪几个网桥，是一种即插即用设备（自学习）
 
-![透明网桥转发表](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/透明网桥转发表.JPG)
+![透明网桥转发表](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/透明网桥转发表.jpeg)
 
 
 
@@ -935,7 +935,7 @@ HDLC，PPP都只支持全双工链路，都可以实现透明传输。都可以�
 
 **存储转发式交换机** 将帧放入高速缓存，并检查是否正确，正确则转发，错误则丢弃。延迟大，可靠性高，可以支持具有不同速率的端口的交换。
 
-##### 冲突域和广播域
+### 冲突域和广播域
 
 ![冲突域和广播域](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/冲突域和广播域.JPG)
 
