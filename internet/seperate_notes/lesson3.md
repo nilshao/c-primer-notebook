@@ -737,11 +737,11 @@ CA：无线局域网：
 
 IEEE802标准所描述的局域网参考模型对应OSI参考模型的数据链路层和物理层，它将数据链路层划分为逻辑链路层LLC，和介质访问控制MAC子层。（图片
 
-![avatar](http://baidu.com/pic/doge.png)
+![mac子层和llc子层](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/mac子层和llc子层.JPG)
 
-+ LLC负责识别网络层协议，然后对他们进行封装
++ LLC负责识别网络层协议，然后对他们进行封装。LLC报头告诉数据链路层一旦帧被接收时，应当对数据包如何处理。为网络层提供服务：无确认无连接、面向连接、带确认无连接、高速传送。
 
-+ MAC子层
++ MAC子层的主要功能包括数据帧的封装/卸装，帧的寻址和识别，帧的接收和发送，链路的管理，帧的差错控制等。MAC子层的存在屏蔽了不同物理链路种类的差异性。
 
 
 ### 以太网Ethernet
