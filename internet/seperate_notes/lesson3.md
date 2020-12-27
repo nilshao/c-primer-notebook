@@ -797,13 +797,13 @@ MAC地址：每个适配器有一个全球唯一的48位二进制地址，前24�
 
 WIFI属于WLAN
 
-无线局域网通用标准：ieee802.11
+无线局域网通用标准：IEEE802.11
 
 #### 802.11的mac帧头格式
 
 ![80211的mac帧头格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/80211的mac帧头格式.JPG)
 
-### 无线局域网
+#### 
 
 
 ### ppp协议，hdlc协议
