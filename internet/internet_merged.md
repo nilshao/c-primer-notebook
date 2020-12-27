@@ -389,7 +389,7 @@ OSI模型层之间有很多重复功能
 
 ### 五层参考模型的数据封装与解封装
 
-![五层参考模型的数据](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter01/五层参考模型的数据.jpeg)# 第二章 物理层
+![五层参考模型的数据封装与解封装](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter01/五层参考模型的数据封装与解封装.jpeg)# 第二章 物理层
 
 ## abstract
 
