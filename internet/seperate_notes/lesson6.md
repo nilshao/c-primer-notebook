@@ -74,6 +74,8 @@
 
 5. 网络健壮性robustness好
 
+![P2P模型](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter06/P2P模型.png)
+
 ## 域名解析系统DNS
 
 Domain Name System域名解析系统，通过ip地址找到网站。用域名替代ip地址，如 www.baidu.com
@@ -107,7 +109,8 @@ IP地址和域名的解析
 
 递归查询，迭代查询（再看一遍
 
-（图片）
+
+![https](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter06/http1s.png)
 
 用高速缓存存储最近查询的域名，提高域名解析速度
 
