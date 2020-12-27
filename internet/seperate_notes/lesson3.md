@@ -729,19 +729,19 @@ CA：无线局域网：
 
 + FDDI网（fiber distributed data interface）：物理上双环拓扑结构，逻辑上是环形拓扑，也很少
 
-+ atm网（asynchronous transfer mode)：较新型的单元交换技术，使用53字节固定长度的单元进行交换（说不明白就别说了
++ ATM网（asynchronous transfer mode)：较新型的单元交换技术，使用53字节固定长度的单元进行交换（说不明白就别说了
 
-+ *无线局域网wlan*（wireless local area network）：ieee802标准（了解即可）
++ **无线局域网WLAN**（wireless local area network）：IEEE802标准（了解即可）
 
-#### mac子层和llc子层
+### MAC子层和LLC子层
 
-ieee802标准所描述的局域网参考模型对应osi参考模型的数据链路层和物理层，它将数据链路层划分为逻辑链路层llc，和介质访问控制mac子层。（图片
+IEEE802标准所描述的局域网参考模型对应OSI参考模型的数据链路层和物理层，它将数据链路层划分为逻辑链路层LLC，和介质访问控制MAC子层。（图片
 
 ![avatar](http://baidu.com/pic/doge.png)
 
-+ llc负责识别网络层协议，然后对他们进行封装
++ LLC负责识别网络层协议，然后对他们进行封装
 
-+ mac子层
++ MAC子层
 
 
 ### 以太网Ethernet
