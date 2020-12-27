@@ -867,27 +867,29 @@ WIFI属于WLAN
 
 ![ppp协议的帧格式2](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/PPP协议的帧格式2.JPG)
 
-#### hdlc协议
+### HDLC协议
 
 高级数据链路控制（high level data link control),是一个在同步网上传输数据，面向比特的数据链路层协议
 
 数据报文可以透明传输，用于实现透明传输的“0比特插入法”易于硬件实现。
 
-##### hldc的站
+#### HDLC的站
 
 主战，从站，符合站
 
-（图片）![hldc的站](http://baidu.com/pic/doge.png)
+![HDLC的站](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/HDLC的站.JPG)
 
-##### hdlc的帧格式
+#### HDLC的帧格式
 
-（图片）![hdlc的帧格式](http://baidu.com/pic/doge.png)
+![hdlc的帧格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/hdlc的帧格式.JPG)
 
-#### ppp协议和hdlc协议
+### PPP协议和HDLC协议
 
-hdlc，ppp都只支持全双工链路，都可以实现透明传输。都可以实现差错检测，但不纠正差错。
+HDLC，PPP都只支持全双工链路，都可以实现透明传输。都可以实现差错检测，但不纠正差错。
 
-### 链路层设备
+![ppp协议和hdlc协议](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/ppp协议和hdlc协议.JPG)
+
+## 链路层设备
 
 #### 物理层扩展以太网
 
