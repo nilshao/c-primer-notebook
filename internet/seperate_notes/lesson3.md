@@ -473,37 +473,35 @@ con：在重传时必须把原来已经正确传送的数据帧批量重传，�
 
 + 改进的时分复用————统计时分复用STDM：**集中器**按需动态分配时隙。
 
-![avatar](http://baidu.com/pic/doge.png)
-
-+ 波分多路复用：光的频分多路复用。
++ 波分多路复用：**光**的频分多路复用。
 
 ![波分多路复用wdm](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/波分多路复用wdm.JPG)
 
-+ 码分多路复用：码分多址（CDMA）是码分复用的一种方式。m一般为64或128。这里的8是方便讲解（图片）（自己再查一下）
++ 码分多路复用：码分多址（CDMA）是码分复用的一种方式。m一般为64或128。这里的8是方便讲解（自己再查一下）
 
 ![码分多路复用cdm](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/码分多路复用cdm.JPG)
 
 
-#### 动态分配信道 ALOHA协议
+## 动态分配信道 ALOHA协议
 
-    动态接入控制：信道并非在用户通信时固定地分配给用户。
+动态接入控制：信道并非在用户通信时固定地分配给用户。
 
-##### 纯aloha协议
+### 纯aloha协议
 
-思想：不监听信道，不按时间槽发送，*随机*重发。（想发就发）T0:发送时间，包括传输时间和传播时间。（图片）
+思想：不监听信道，不按时间槽发送，*随机*重发。（想发就发）T0:发送时间，包括传输时间和传播时间。
 
-![avatar](http://baidu.com/pic/doge.png)
+![纯aloha协议](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/纯aloha协议.jpeg)
 
 冲突如何检测：如果发生冲突，接收方就会检测出差错，然后不予确认，发送方在一定时间内收不到就判断发生了冲突。
 
 冲突如何解决：超时候等一时间随机重传。重传重传直到收到确认帧
 
-##### 时隙aloha协议
+### 时隙aloha协议
 
 思想：把时间分成若干个相同的时间片，所有用户在时间片开始时刻同步接入网络信道，若发生冲突，
 则必须等到下一个时间片开始时刻再发送。（控制了想发就发的随意性）
 
-##### 总结
+### 总结
 
 纯aloha吞吐量较低，吞吐量：一段时间内成功发送的平均帧数。
 
