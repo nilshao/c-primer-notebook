@@ -611,7 +611,7 @@ CD：碰撞检测（冲突检测），“边发送边监听”，适配器边发
 
 冲突，碰撞
 
-![传播时延对载波监听的影响过程](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/传播时延对载波监听的影响过程.JPG)
+![传播时延对载波监听的影响过程](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/传播时延对载波监听的影响过程.jpeg)
 
 碰撞后信息发生叠加，可以检测出来。
 
@@ -628,19 +628,18 @@ CD：碰撞检测（冲突检测），“边发送边监听”，适配器边发
 3. 从离散的整数集合[0,1,...,2的k次方 -1]中随即取出一个数r，重传所需要的退避时间就是r倍的*基本退避时间*，即2r*tao。
 
 4. 当重传次数达到16次仍不能成功时，说明网络太拥挤，认为此帧永远无法正确发出，抛弃此帧并向高层报告出错。重传：截断二进制指数规避算法。
-（图片
 
-![avatar](http://baidu.com/pic/doge.png)
+![截断二进制指数规避算法](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/截断二进制指数规避算法.JPG)
 
-##### 总结
+#### 总结
 
 若连续多次冲突
 
-##### 例题
+#### 例题
 
-（图片![avatar](http://baidu.com/pic/doge.png)
+![截断二进制指数规避习题](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/截断二进制指数规避习题.JPG)
 
-##### 最小帧长
+#### 最小帧长
 
 发了一个帧，但是发生了碰撞，但是在发送完之后才检测到发生碰撞，但是无法停止因为已经发完了。因此要最小帧长。
 
