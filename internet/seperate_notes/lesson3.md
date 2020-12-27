@@ -803,8 +803,15 @@ WIFI属于WLAN
 
 ![80211的mac帧头格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/80211的mac帧头格式.JPG)
 
-#### 
+#### 无线局域网分类
 
+1. 有固定基础设施的无线局域网
+
+![有固定基础设施的无线局域网](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/有固定基础设施的无线局域网.jpeg)
+
+2. 无固定基础设施的无线局域网的自组织网络
+
+![无固定基础设施的无线局域网的自组织网络](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/无固定基础设施的无线局域网的自组织网络.jpeg)
 
 ### ppp协议，hdlc协议
 
