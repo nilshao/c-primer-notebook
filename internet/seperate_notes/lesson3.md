@@ -871,11 +871,11 @@ WIFI属于WLAN
 
 高级数据链路控制（high level data link control),是一个在同步网上传输数据，面向比特的数据链路层协议
 
-数据报文可以透明传输，用于实现透明传输的“0比特插入法”易于硬件实现。
+数据报文可以实现**透明传输**，用于实现透明传输的“0比特插入法”易于硬件实现。
 
 #### HDLC的站
 
-主战，从站，符合站
+主战，从站，复合站
 
 ![HDLC的站](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/HDLC的站.JPG)
 

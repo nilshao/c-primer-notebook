@@ -1468,115 +1468,127 @@ IEEE802标准所描述的局域网参考模型对应OSI参考模型的数据链�
 
 ![以太网传输介质与拓扑结构](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/以太网传输介质与拓扑结构.JPG)
 
-### 10base-t以太网
+#### 10base-t以太网
+
+![10base-t以太网](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/10base-t以太网.jpeg)
 
 #### 适配器和mac地址
 
 计算机与外界局域网的连接是通过通信适配器进行的。“网卡”，适配器也有处理器和存储器，存储器包括rom和ram。
 
-rom上有计算机硬件地址、物理地址、mac地址，是硬件的标识符。
+ROM上有计算机硬件地址、物理地址、mac地址，是硬件的标识符。
 
-mac地址：每个适配器有一个全球唯一的48位二进制地址，前24位代表厂家，由ieee规定，后24位厂家自己制定，常用6个十六进制数字表示。
-如02-60-8c-e4-b1-21，在生产适配器时，这6字节MAC地址已被固化在适配器的ROM中，是全球唯一的。
+MAC地址：每个适配器有一个全球唯一的48位二进制地址，前24位代表厂家，由IEEE规定，后24位厂家自己制定，常用6个十六进制数字表示。如02-60-8c-e4-b1-21，在生产适配器时，这6字节MAC地址已被固化在适配器的ROM中，是全球唯一的。
 
-#### 以太网mac帧
+#### 以太网MAC帧
 
-最常用的mac帧是以太网v2的格式。
-（图片
+最常用的mac帧是以太网v2的格式。(!!!再自己看看)
 
 ![以太网mac帧](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/以太网mac帧.JPG)
 
-注：数据长度范围：46-1500: 1500是mtu，最大数据传送单元，最小帧长64字节，之前有了18字节了，为了保证mac帧是有效帧。
+注：数据长度范围：46-1500: 1500是mtu，最大数据传送单元，最小帧长64字节，之前有了18字节了，为了保证MAC帧是有效帧。
 
 #### 高速以太网
 
-（图片
-![avatar](http://baidu.com/pic/doge.png)
+![高速以太网](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/高速以太网.JPG)
 
-### 无线局域网wlan
+### 无线局域网WLAN
 
-wifi属于wlan
+WIFI属于WLAN
 
-无线局域网通用标准：ieee802.11
+无线局域网通用标准：IEEE802.11
 
 #### 802.11的mac帧头格式
 
-（图片![avatar](http://baidu.com/pic/doge.png)
+![80211的mac帧头格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/80211的mac帧头格式.JPG)
 
-#### 剩余在看一次3.6.3
+#### 无线局域网分类
 
+1. 有固定基础设施的无线局域网
 
-### ppp协议，hdlc协议
+![有固定基础设施的无线局域网](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/有固定基础设施的无线局域网.jpeg)
+
+2. 无固定基础设施的无线局域网的自组织网络
+
+![无固定基础设施的无线局域网的自组织网络](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/无固定基础设施的无线局域网的自组织网络.jpeg)
+
+## PPP协议，HDLC协议
 
 广域网（WAN wide area network）通常跨界很大的物理范围，所覆盖的范围从几十公里到几千公里，能连接多个城市或国家，或者横跨几个周并能提供远距离通信，形成国际性的远程网络。
 
-广域网的通信子网使用*分组交换技术*，广域网的通信子网可以利用公用分组交换网，微信通信网和无线分组交换网，将分布在各个地区的局域网或计算机系统互联起来，达到资源共享的目的。因特网是世界范围内最大的广域网。
+广域网的通信子网使用**分组交换技术**，广域网的通信子网可以利用公用分组交换网，卫星通信网和无线分组交换网，将分布在各个地区的局域网或计算机系统互联起来，达到资源共享的目的。因特网是世界范围内最大的广域网。
 
-#### ppp协议
+![广域网](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/广域网.jpeg)
 
-点对点协议point-to-point protocol，是目前使用最广泛的数据链路层协议。用户使用拨号电话接入因特网时一般都用ppp协议。*只支持全双工链路*。
+### PPP协议
 
-##### 应满足的要求：
+点对点协议point-to-point protocol，是目前使用最广泛的数据链路层协议。用户使用拨号电话接入因特网时一般都用PPP协议。**只支持全双工链路**。
 
-+ *简单* 对于链路层的帧，无需纠错，无需序号，无需流量控制
+#### 应满足的要求：
 
-+ *封装成帧* 帧定界符
++ **简单** 对于链路层的帧，无需纠错，无需序号，无需流量控制
 
-+ *透明传输* 与帧定界符相同的比特组合数据时：异步线路用字节填充，同步线路用比特填充
++ **封装成帧** 帧定界符
 
-+ *多种网络层协议* 封装的ip数据包可以采用多种协议
++ **透明传输** 与帧定界符相同的比特组合数据时：异步线路用字节填充，同步线路用比特填充
 
-+ *多种类型链路* 串行/并行，同步/异步，电/光
++ **多种网络层协议** 封装的IP数据包可以采用多种协议
 
-+ *差错检测* 错就丢弃
++ **多种类型链路** 串行/并行，同步/异步，电/光
 
-+ *检测连接状态* 链路是否正常工作
++ **差错检测** 错就丢弃
 
-+ *最大传送单元* 数据部分最大长度MTU
++ **检测连接状态** 链路是否正常工作
 
-+ *网络层地址协商* 知道通信双方的网络层地址
++ **最大传送单元** 数据部分最大长度MTU
 
-##### 无需满足的要求
++ **网络层地址协商** 知道通信双方的网络层地址
+
+#### 无需满足的要求
 
 纠错，流量控制，序号，不支持多点线路
 
-##### 三个组成部分
+#### 三个组成部分
 
-1. 一个将ip数据报封装到串行链路（同步串行/异步串行）的方法
+1. 一个将IP数据报封装到串行链路（同步串行/异步串行）的方法
 
-2. 链路控制协议lcp：建立并维护数据链路连接（身份验证功能）
+2. 链路控制协议LCP：建立并维护数据链路连接（身份验证功能）
 
-3. 网络控制协议ncp：ppp可支持多种网络层协议，每个不同的网络层协议都要一个相应的ncp来配置，为网络协议 建立和配置 逻辑链接。
+3. 网络控制协议NCP：PPP可支持多种网络层协议，每个不同的网络层协议都要一个相应的NCP来配置，为网络协议 建立和配置 逻辑链接。
 
-##### 状态图 
+#### 状态图 
 
-（图片）![avatar](http://baidu.com/pic/doge.png)
+![状态图](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/状态图.jpeg)
 
-##### ppp协议的帧格式
+#### PPP协议的帧格式
 
-（图片）![avatar](http://baidu.com/pic/doge.png)
+![ppp协议的帧格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/PPP协议的帧格式.JPG)
 
-#### hdlc协议
+![ppp协议的帧格式2](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/PPP协议的帧格式2.JPG)
+
+### HDLC协议
 
 高级数据链路控制（high level data link control),是一个在同步网上传输数据，面向比特的数据链路层协议
 
-数据报文可以透明传输，用于实现透明传输的“0比特插入法”易于硬件实现。
+数据报文可以实现**透明传输**，用于实现透明传输的“0比特插入法”易于硬件实现。
 
-##### hldc的站
+#### HDLC的站
 
-主战，从站，符合站
+主战，从站，复合站
 
-（图片）![hldc的站](http://baidu.com/pic/doge.png)
+![HDLC的站](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/HDLC的站.JPG)
 
-##### hdlc的帧格式
+#### HDLC的帧格式
 
-（图片）![hdlc的帧格式](http://baidu.com/pic/doge.png)
+![hdlc的帧格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/hdlc的帧格式.JPG)
 
-#### ppp协议和hdlc协议
+### PPP协议和HDLC协议
 
-hdlc，ppp都只支持全双工链路，都可以实现透明传输。都可以实现差错检测，但不纠正差错。
+HDLC，PPP都只支持全双工链路，都可以实现透明传输。都可以实现差错检测，但不纠正差错。
 
-### 链路层设备
+![ppp协议和hdlc协议](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/ppp协议和hdlc协议.JPG)
+
+## 链路层设备
 
 #### 物理层扩展以太网
 
