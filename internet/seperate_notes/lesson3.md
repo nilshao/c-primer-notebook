@@ -861,7 +861,7 @@ WIFI属于WLAN
 
 ![状态图](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/状态图.jpeg)
 
-#### ppp协议的帧格式
+#### PPP协议的帧格式
 
 ![ppp协议的帧格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/PPP协议的帧格式.JPG)
 
