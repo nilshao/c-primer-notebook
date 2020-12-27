@@ -857,9 +857,9 @@ WIFI属于WLAN
 
 3. 网络控制协议NCP：PPP可支持多种网络层协议，每个不同的网络层协议都要一个相应的NCP来配置，为网络协议 建立和配置 逻辑链接。
 
-##### 状态图 
+#### 状态图 
 
-（图片）![avatar](http://baidu.com/pic/doge.png)
+![状态图](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/状态图.jpeg)
 
 ##### ppp协议的帧格式
 
