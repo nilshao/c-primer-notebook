@@ -645,7 +645,7 @@ CD：碰撞检测（冲突检测），“边发送边监听”，适配器边发
 
 真的传输时延至少要两倍于信号在总线中的传播时延。（公式图片——）但最小64B，不足则填充
 
-![avatar](http://baidu.com/pic/doge.png)
+![帧传输最小帧长](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/帧传输最小帧长.JPG)
 
 #### 动态分配信道 CSMA-CA协议
 
