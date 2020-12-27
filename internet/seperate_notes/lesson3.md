@@ -769,17 +769,19 @@ IEEE802标准所描述的局域网参考模型对应OSI参考模型的数据链�
 
 ![以太网传输介质与拓扑结构](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/以太网传输介质与拓扑结构.JPG)
 
-### 10base-t以太网
+#### 10base-t以太网
+
+![10base-t以太网](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/10base-t以太网.jpeg)
 
 #### 适配器和mac地址
 
 计算机与外界局域网的连接是通过通信适配器进行的。“网卡”，适配器也有处理器和存储器，存储器包括rom和ram。
 
-rom上有计算机硬件地址、物理地址、mac地址，是硬件的标识符。
+ROM上有计算机硬件地址、物理地址、mac地址，是硬件的标识符。
 
-mac地址：每个适配器有一个全球唯一的48位二进制地址，前24位代表厂家，由ieee规定，后24位厂家自己制定，常用6个十六进制数字表示。如02-60-8c-e4-b1-21，在生产适配器时，这6字节MAC地址已被固化在适配器的ROM中，是全球唯一的。
+MAC地址：每个适配器有一个全球唯一的48位二进制地址，前24位代表厂家，由IEEE规定，后24位厂家自己制定，常用6个十六进制数字表示。如02-60-8c-e4-b1-21，在生产适配器时，这6字节MAC地址已被固化在适配器的ROM中，是全球唯一的。
 
-#### 以太网mac帧
+#### 以太网MAC帧
 
 最常用的mac帧是以太网v2的格式。
 
