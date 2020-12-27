@@ -793,7 +793,7 @@ MAC地址：每个适配器有一个全球唯一的48位二进制地址，前24�
 
 ![高速以太网](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/高速以太网.JPG)
 
-### 无线局域网wlan
+### 无线局域网WLAN
 
 WIFI属于WLAN
 
