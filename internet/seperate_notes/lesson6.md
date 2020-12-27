@@ -60,6 +60,8 @@
 
 应用： Web，文件传输FTP，远程登录，电子邮件
 
+![CS模型](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter06/CS模型.png)
+
 ## p2p模型peer to peer
 
 也叫对等模型，不存在永远在线的服务器。每个主机既可以提供服务，也可以请求服务
