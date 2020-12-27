@@ -707,7 +707,8 @@ CA：无线局域网：
 #### 拓扑结构
 
 星型，总线型，环形，树形
-（图片）![avatar](http://baidu.com/pic/doge.png)
+
+![局域网拓扑结构](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/局域网拓扑结构.JPG)
 
 
 #### 局域网介质访问控制方法
