@@ -471,11 +471,13 @@ con：在重传时必须把原来已经正确传送的数据帧批量重传，�
 
 ![时分多路复用tdm](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/时分多路复用tdm.JPG)
 
-+ 改进的时分复用————统计时分复用STDM：集中器（图片）按需动态分配时隙。
++ 改进的时分复用————统计时分复用STDM：**集中器**按需动态分配时隙。
 
 ![avatar](http://baidu.com/pic/doge.png)
 
 + 波分多路复用：光的频分多路复用。
+
+![波分多路复用wdm](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/波分多路复用wdm.JPG)
 
 + 码分多路复用：码分多址（CDMA）是码分复用的一种方式。m一般为64或128。这里的8是方便讲解（图片）（自己再查一下）
 
