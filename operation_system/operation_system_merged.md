@@ -1619,9 +1619,23 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 若内存不够，由操作系统负责将内存中暂时用不到的信息换出到外存。 -> 页面置换，段置换功能。
 
+## 请求分页管理方式
 
+请求分页存储管理和基本分页存储管理的主要区别：
 
+1. 在程序执行过程中，当访问信息不在内存时，由操作系统负责将所需要的信息从外存调入内存，然后继续执行程序
 
+    即：操作系统要提供**请求调页功能**，将缺失页面从外存调入到内存
+
+2. 若内存空间不够，由操作系统负责将内存中暂时用不到的信息换出到外存。
+    
+    即：操作系统提供**页面置换功能**，将暂时用不到的页面换出到外存。
+
+![请求分页管理方式](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/请求分页管理方式.jpeg)
+
+### 页表机制
+
+![页表机制](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/页表机制.jpeg)
 
 
 
