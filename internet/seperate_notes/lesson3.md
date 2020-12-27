@@ -500,6 +500,8 @@ con：在重传时必须把原来已经正确传送的数据帧批量重传，�
 
 思想：把时间分成若干个相同的时间片，所有用户在时间片开始时刻同步接入网络信道，若发生冲突，则必须等到下一个时间片开始时刻再发送。（控制了想发就发的随意性）
 
+![时隙aloha协议](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/时隙aloha协议.jpeg)
+
 ### 总结
 
 纯aloha吞吐量较低，吞吐量：一段时间内成功发送的平均帧数。
