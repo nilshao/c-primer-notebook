@@ -301,6 +301,7 @@ T内发送L比特数据；发送周期T：从开始发送数据，到收到第�
 
 **信道吞吐率** = 信道利用率*发送方的发送速率
 
+![信道利用率信道吞吐率](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/信道利用率信道吞吐率.JPG)
 
 ### 流水线技术
 
