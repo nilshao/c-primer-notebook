@@ -777,13 +777,11 @@ IEEE802标准所描述的局域网参考模型对应OSI参考模型的数据链�
 
 rom上有计算机硬件地址、物理地址、mac地址，是硬件的标识符。
 
-mac地址：每个适配器有一个全球唯一的48位二进制地址，前24位代表厂家，由ieee规定，后24位厂家自己制定，常用6个十六进制数字表示。
-如02-60-8c-e4-b1-21，在生产适配器时，这6字节MAC地址已被固化在适配器的ROM中，是全球唯一的。
+mac地址：每个适配器有一个全球唯一的48位二进制地址，前24位代表厂家，由ieee规定，后24位厂家自己制定，常用6个十六进制数字表示。如02-60-8c-e4-b1-21，在生产适配器时，这6字节MAC地址已被固化在适配器的ROM中，是全球唯一的。
 
 #### 以太网mac帧
 
 最常用的mac帧是以太网v2的格式。
-（图片
 
 ![以太网mac帧](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/以太网mac帧.JPG)
 
@@ -791,12 +789,11 @@ mac地址：每个适配器有一个全球唯一的48位二进制地址，前24�
 
 #### 高速以太网
 
-（图片
-![avatar](http://baidu.com/pic/doge.png)
+![高速以太网](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/高速以太网.JPG)
 
 ### 无线局域网wlan
 
-wifi属于wlan
+WIFI属于WLAN
 
 无线局域网通用标准：ieee802.11
 
