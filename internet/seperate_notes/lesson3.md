@@ -647,7 +647,7 @@ CD：碰撞检测（冲突检测），“边发送边监听”，适配器边发
 
 ![帧传输最小帧长](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/帧传输最小帧长.JPG)
 
-#### 动态分配信道 CSMA-CA协议
+### 动态分配信道 CSMA-CA协议
 
 CA：collision avoidance，不仅能检测，还能避免
 
