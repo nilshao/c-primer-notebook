@@ -683,16 +683,14 @@ CA：无线局域网：
 
 3. RTS/CTS帧
 
-##### csma/cd 与 csma/ca总结
+#### csma/cd 与 csma/ca总结
 
 ![csma/cd和csma/ca总结](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/csmacd和csmaca总结.JPG)
 
 
-
-
 ### 局域网
 
-局域网LAN（local area network），是指在某一区域内多台计算机互连成的计算机组，使用广播信道。
+局域网LAN（Local Area Network），是指在某一区域内多台计算机互连成的计算机组，使用广播信道。
 
 + 覆盖地理范围较小，只能在一个相对独立区域内联
 
