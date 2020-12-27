@@ -1637,6 +1637,9 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ![页表机制](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/页表机制.jpeg)
 
+### 缺页中断机构
+
+![缺页中断机构](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/缺页中断机构.jpeg)
 
 
 
