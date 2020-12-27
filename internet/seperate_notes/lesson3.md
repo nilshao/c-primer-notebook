@@ -801,9 +801,9 @@ WIFI属于WLAN
 
 #### 802.11的mac帧头格式
 
-（图片![avatar](http://baidu.com/pic/doge.png)
+![80211的mac帧头格式](https://github.com/nilshao/cpp-notebook/raw/master/internet/pictures/chapter03/80211的mac帧头格式.JPG)
 
-#### 剩余在看一次3.6.3
+### 无线局域网
 
 
 ### ppp协议，hdlc协议
