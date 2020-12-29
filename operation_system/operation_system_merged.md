@@ -1658,7 +1658,9 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ![请求分页中的地址变换过程](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/请求分页中的地址变换过程.png)
 
+在具有快表机构的请求分页系统中，访问一个逻辑地址时，若发生缺页，则地址变换步骤：
 
+查快表（未命中）-- 查慢表（发现未调入内存）-- 调页（调入的页面对应的表项会直接加入快表） -- 查快表（命中） -- 访问目标内存单元
 
 
 
