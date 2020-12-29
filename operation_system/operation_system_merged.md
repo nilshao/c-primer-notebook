@@ -1686,6 +1686,22 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ### 先进先出置换算法FIFO
 
+![先进先出置换算法FIFO](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/先进先出置换算法FIFO.png)
+
+缺页次数9
+
+假如分配内存块时缺页次数反而变成了10次：
+**Belady异常**：当为进程分配的物理块增多时，缺页次数不减反增的异常现象
+
+只有FIFO算法会造成Belady异常。另外，FIFO算法虽然简单，但是该算法与实际运行时的规律并不适应，因为先进入的页面也有可能最常被访问。因此算法性能差。
+
+### 最近最久未使用置换算法LRU
+
+![最近最久未使用置换算法LRU](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/最近最久未使用置换算法LRU.png)
+
+
+
+
 
 
 
