@@ -148,8 +148,11 @@
 
 ![最近最久未使用置换算法LRU](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/最近最久未使用置换算法LRU.png)
 
+该算法实现需要专门的硬件支持，虽然算法性能好，但是实现困难，开销大
 
+### 始终置换算法CLOCK
 
+![始终置换算法CLOCK](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/始终置换算法CLOCK.png)
 
 
 
