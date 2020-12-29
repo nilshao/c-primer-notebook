@@ -1662,6 +1662,15 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 查快表（未命中）-- 查慢表（发现未调入内存）-- 调页（调入的页面对应的表项会直接加入快表） -- 查快表（命中） -- 访问目标内存单元
 
+### 总结
+
+![请求分页管理方式](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/请求分页管理方式.png)
+
+## 页面置换算法
+
+回忆：”若内存空间不够，操作系统负责将内存中暂时用不到的信息换出到外存“ ————由页面置换算法来决定应该换出哪个页面
+
+## 页面分配策略
 
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpeg)
