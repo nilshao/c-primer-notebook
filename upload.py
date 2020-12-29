@@ -1,7 +1,7 @@
 #!/bin/sh
 #!/usr/bin/python
 
-upload_info = "test"
+upload_info = 'test'
 
 chmod +x merge.py 
 ./merge.py
