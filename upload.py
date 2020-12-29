@@ -5,5 +5,5 @@ chmod +x merge.py
 ./merge.py
 
 git add .
-git commit -m "upload"
+git commit -m "update"
 git push
