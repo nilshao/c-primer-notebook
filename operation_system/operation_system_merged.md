@@ -1670,6 +1670,14 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 回忆：”若内存空间不够，操作系统负责将内存中暂时用不到的信息换出到外存“ ————由页面置换算法来决定应该换出哪个页面
 
+![页面置换算法](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/页面置换算法.png)
+
+由于页面的换入和换出需要磁盘I/O，会有较大的开销，因此好的页面置换算法应该追求更少的缺页率
+
+### 最佳置换算法OPT
+
+
+
 ## 页面分配策略
 
 
