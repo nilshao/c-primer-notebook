@@ -154,10 +154,11 @@
 
 ![时钟置换算法CLOCK](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/时钟置换算法CLOCK.png)
 
-### 改进型的时钟置换算法
+### 改进型的时钟置换算法，也叫“二次机会法”
 
 ![改进型的时钟置换算法](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/改进型的时钟置换算法.png)
 
+优先级：
 
 ## 页面分配策略
 
