@@ -90,11 +90,20 @@
 
 ![缺页中断机构](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/缺页中断机构.jpeg)
 
+![缺页中断机构2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/缺页中断机构2.jpeg)
 
 
+### 地址变换机构
 
+![地址变换机构](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/地址变换机构.png)
 
+新增步骤：
 
+1. 请求调页（查找页表项时进行判断）
+2. 页面置换（需要时调入页面，但没有空闲内存块时进行
+3. 需要修改请求页表中新增的表项
+
+![地址变换机构2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/地址变换机构2.png)
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpeg)
 
