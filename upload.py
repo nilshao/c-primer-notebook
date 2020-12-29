@@ -9,5 +9,5 @@ chmod +x merge.py
 echo upload_info
 
 git add .
-git commit -m "up"
+git commit -m "up00"
 git push
