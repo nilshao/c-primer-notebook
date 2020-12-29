@@ -1701,11 +1701,13 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 该算法实现需要专门的硬件支持，虽然算法性能好，但是实现困难，开销大
 
-### 始终置换算法CLOCK
+### 时钟置换算法CLOCK
 
-![始终置换算法CLOCK](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/始终置换算法CLOCK.png)
+![时钟置换算法CLOCK](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/时钟置换算法CLOCK.png)
 
+### 改进型的时钟置换算法
 
+![改进型的时钟置换算法](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/改进型的时钟置换算法.png)
 
 
 ## 页面分配策略
