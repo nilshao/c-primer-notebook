@@ -1656,6 +1656,12 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ![地址变换机构2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/地址变换机构2.png)
 
+![请求分页中的地址变换过程](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/请求分页中的地址变换过程.png)
+
+
+
+
+
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpeg)
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpg)
