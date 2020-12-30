@@ -311,7 +311,10 @@
 
 段表：段的映射表
 
+![分段分页](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/分段分页.jpeg)
 
+而且：
+分段比分页更容易实现信息的共享和保护
 
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpeg)
