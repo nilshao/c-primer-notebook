@@ -157,7 +157,7 @@ CPU如何判断当前是否可以执行特权指令？规定两种处理器状�
 
 ![操作系统的内核](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/操作系统的内核.png)
 
-内核是计算机上配置的底层软件，是操作系统最基本、最核心的部分，实现操作系统内核功能的那些程序就是内核程序
+内核是计算机上配置的底层**软件**，是操作系统最基本、最核心的部分，实现操作系统内核功能的那些程序就是内核程序
 
 ![操作系统的内核程序](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter1/操作系统的内核程序.png)
 
