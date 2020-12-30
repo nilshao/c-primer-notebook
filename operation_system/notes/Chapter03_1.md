@@ -261,8 +261,9 @@
 
 ### 引入快表之后，地址的变换过程
 
+![引入快表之后地址的变换过程](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/引入快表之后地址的变换过程.jpeg)
 
-
+### 总结
 
 
 
