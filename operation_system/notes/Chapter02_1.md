@@ -174,7 +174,7 @@ PCB是进程存在的唯一标志！！！
 
 管道是指用于连接读写进程的一个共享文件，又名pipe文件，其实就是在内存中开辟一个大小固定的**缓冲区**。
 
-1. 管道只能采用半双工通信，某一时间段内只能实现单向传输，如果要实现双向同时通信，需要设置两个管道。ß
+1. 管道只能采用半双工通信，某一时间段内只能实现单向传输，如果要实现双向同时通信，需要设置两个管道。
 
 2. 各个进程需要互斥地访问管道。
 
@@ -189,6 +189,10 @@ PCB是进程存在的唯一标志！！！
 进程之间的数据交换以格式化信息（Message）为单位，进程通过操作系统的“发送消息/接收消息“两个原语进行数据交换。
 
 ![消息传递](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/消息传递.jpeg)
+
+### 总结
+
+![进程通信总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/进程通信总结.jpeg)
 
 ## 线程
 
