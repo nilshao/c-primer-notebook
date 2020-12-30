@@ -160,7 +160,15 @@
 
 优先级：
 
+![改进型的时钟置换算法优先级](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/改进型的时钟置换算法优先级.png)
+
+### 总结
+
+![改进型的时钟置换算法总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/改进型的时钟置换算法总结.png)
+
 ## 页面分配策略
+
+![页面分配策略](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/页面分配策略.png)
 
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpeg)
