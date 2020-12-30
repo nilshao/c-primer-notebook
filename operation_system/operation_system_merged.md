@@ -1766,6 +1766,13 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ![外存](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/外存.jpeg)
 
+![对换区](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/对换区.jpeg)
+
+![文件区](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/文件区.jpeg)
+
+
+
+
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpeg)
 
