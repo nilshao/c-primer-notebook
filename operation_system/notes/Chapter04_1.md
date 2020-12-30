@@ -288,36 +288,3 @@ linux采用的管理方式。
 ## 文件系统的层次结构
 
 ![文件系统的层次结构](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter4/文件系统的层次结构.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
