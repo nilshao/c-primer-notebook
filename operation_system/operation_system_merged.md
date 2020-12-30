@@ -1721,8 +1721,7 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ![页面分配策略](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/页面分配策略.png)
 
-### 页面分配、置换策略
-#### 驻留集
+### 驻留集
 
 指请求分页存储管理中给进程分配的物理块的集合。
 
@@ -1747,7 +1746,7 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 | 固定分配  | 可 | NO  |
 | 可变分配  | 可 | 可  |
 
-#### 页面分配、置换策略
+### 页面分配、置换策略
 
 **固定分配局部置换**：系统为每个进程分配一定数量的物理块，在整个运行期间都不改变，若进程在运行中发生缺页
 
@@ -1757,7 +1756,15 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 可变分配局部置换：要根据发生缺页的频率来动态增加或减少进程的物理块。
 
+### 调入页面的时机
 
+1. 预调页策略：根据局部性原理，一次调入若干个相邻的页面可能比一次调入一个页面高效，但如果提前调入的页面中大部分都没有被访问过，则又是低效的。这种策略主要适用于**进程的首次调入————“运行前调入”**
+
+2. 请求调页策略：进程在运行期间发现缺页时才将所缺页面调入内存。有这种策略调入的页面一定会被访问到，但由于每次只能调入一页，I/O开销比较大。**“运行时调入”**
+
+### 从何处调入页面
+
+![外存](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/外存.jpeg)
 
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpeg)
