@@ -265,8 +265,26 @@
 
 ### 总结
 
+![快表总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/快表总结.jpeg)
 
+## 两级页表
 
+### 单级页表的问题
+
+![单级页表的问题](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/单级页表的问题.jpeg)
+
+根据局部性原理，很多时候进程在一段时间内只需要访问某几个页面就可以正常运行了，没有必要让整个页表都常驻内存。
+
+问题：
+
+1. 页表必须连续存放,因此当页表很大时,需要占用很多个连续的页框。 
+2. 没有必要让整个页表常驻内存,因为进程在一段时间内可能只需要访问某几个特定的页面。
+
+### 如何解决单级页表的问题
+
+可将长长的页表进行分组,使每个内存块刚好可以放入一个分组。
+
+另外,要为离散分配的页表再建立一张页表,称为页目录表,或称外层页表,或称顶层页表
 
 
 
