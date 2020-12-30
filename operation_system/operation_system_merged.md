@@ -1578,47 +1578,16 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ![分段总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/分段总结.png)
 
+## 段页式管理
 
+（再看
 
 
 
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpeg)
 
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpg)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.JPG)
-
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.png)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.PNG)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
