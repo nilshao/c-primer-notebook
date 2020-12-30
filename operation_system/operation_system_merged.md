@@ -1770,7 +1770,20 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ![文件区](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/文件区.jpeg)
 
+![UNIX方式](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/UNIX方式.jpeg)
 
+### 抖动、颠簸现象
+
+刚换出的页面马上又要换入内存，刚刚换入的页面马上又要换出外存，这种频繁的页面调度行为称为抖动，或簸。产生抖动的主要原因是进程频繁访问的页面数目高于可用的物理块数（分配给进程的物理块不够）
+
+为进程分配的物理块太少,会使进程发生抖动现象。为进程分配的物理块太多,又会降低系统整体的并发度,降低某些资源的利用率
+
+为了研究为应该为每个进程分配多个物理块, Denning提出了进程“工作集”的概念
+
+### 工作集
+
+**驻留集：** 指请求分页存储管理中给进程分配的内存块的集合。
+**工作集：** 指在某段时间间隔里，进程实际访问页面的集合。
 
 
 
