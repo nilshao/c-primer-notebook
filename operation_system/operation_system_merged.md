@@ -1792,18 +1792,7 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 拓展:基于局部性原理可知,进程在一段时间内访问的页面与不久之后会访问的页面是有相关性的。因此,可以根据进程近期访问的页面集合(工作集)来设计一种页面置换算法ー一选择一个不在工作集中的页面进行淘汰。
 
-
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpeg)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpg)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.JPG)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.png)
-
-![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.PNG)
-
+![页面分配策略总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/页面分配策略总结.png)
 # 第四章 第一节 
 
 ## 文件管理简介
