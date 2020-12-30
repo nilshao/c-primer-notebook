@@ -1551,6 +1551,15 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 ![两级页表总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/两级页表总结.jpeg)
 
+## 基本分段存储管理
+
+**分段**和分页的区别就是离散分配地址空间的基本单位不同。
+
+段的大小不一，因为是**逻辑**上的划分
+
+段表：段的映射表
+
+
 
 
 ![](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/.jpeg)
