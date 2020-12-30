@@ -1751,9 +1751,11 @@ wait(S)和signal(S)是自己写的函数，S就是信号量
 
 **固定分配局部置换**：系统为每个进程分配一定数量的物理块，在整个运行期间都不改变，若进程在运行中发生缺页
 
-![页面分配置换策略1](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/页面分配置换策略1.jpeg)
+![页面分配置换策略](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/页面分配置换策略.jpeg)
 
+可变分配全局置换：只要缺页就给分配新物理块
 
+可变分配局部置换：要根据发生缺页的频率来动态增加或减少进程的物理块。
 
 
 
