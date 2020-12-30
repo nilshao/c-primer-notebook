@@ -240,7 +240,7 @@
  
 ![基本地址变换机构总结](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/基本地址变换机构总结.png)
 
-## 具有块表的地址变换结构
+## 具有快##表的地址变换结构
 
 ### 局部性原理：
 
@@ -256,6 +256,10 @@
 
 ![快表TLB](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter3/快表TLB.jpeg)
 
+
+快表中存放的是页表的一部分副本，若快表命中就不需要再访问内存。
+
+### 引入快表之后，地址的变换过程
 
 
 
