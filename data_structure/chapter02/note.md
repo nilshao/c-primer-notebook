@@ -34,12 +34,19 @@ L=(a1,a2,a3...ai,ai+1,...an)
 **顺序表**。用顺序存储的方式实现线性表 
 **顺序存储**。把逻辑上相邻的元素存储在物理 位置上也相邻的存储单元中,元素之间的关系由存储单元的邻接关系来体现
 
+![顺序表定义](https://github.com/nilshao/cpp-notebook/raw/master/data_structure/chapter02/images/顺序表定义.png)
 
+**数据元素大小**。C语言：sizeof(ele)
 
+### 顺序表的实现————静态分配
 
+注意：没有设置数据元素的默认值，内存中会有遗留的“脏数据”，有的会元素初始化为奇怪的数字。
 
+如果数据存满了怎么办：存储空间是静态的，顺序表的表长确定后就无法更改。
 
+### 顺序表的实现————动态分配
 
+![动态分配](https://github.com/nilshao/cpp-notebook/raw/master/data_structure/chapter02/images/动态分配.png)  
 
 
 
