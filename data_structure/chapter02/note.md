@@ -24,7 +24,16 @@ L=(a1,a2,a3...ai,ai+1,...an)
 
 
 ## 顺序表
+
+回忆：
+
 ![线性表存储物理结构](https://github.com/nilshao/cpp-notebook/raw/master/data_structure/chapter02/images/线性表存储物理结构.png)
+
+### 顺序表定义
+
+**顺序表**。用顺序存储的方式实现线性表 
+**顺序存储**。把逻辑上相邻的元素存储在物理 位置上也相邻的存储单元中,元素之间的关系由存储单元的邻接关系来体现
+
 
 
 
