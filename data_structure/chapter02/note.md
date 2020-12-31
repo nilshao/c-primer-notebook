@@ -48,6 +48,25 @@ L=(a1,a2,a3...ai,ai+1,...an)
 
 ![动态分配](https://github.com/nilshao/cpp-notebook/raw/master/data_structure/chapter02/images/动态分配.png)  
 
+malloc函数的参数指明了要分配多大的连续内存空间。
+
+C++：new，delete
+
+可以增加动态数组的长度
+
+![动态分配增加数组长度](https://github.com/nilshao/cpp-notebook/raw/master/data_structure/chapter02/images/动态分配增加数组长度.png) 
+
+### 顺序表特点
+
+1. 随机访问，在O(1)找到第i个元素
+2. 存储密度高，每个节点只存储数据元素
+3. 拓展容量不方便(即便采用动态分配的方式实现,拓展长度的时间复杂度也比较高) 
+4. 插入、删除操作不方便,需要移动大量元素
+   
+
+
+
+
 
 
 
