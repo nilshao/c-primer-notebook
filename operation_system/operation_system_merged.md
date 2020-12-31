@@ -1026,11 +1026,14 @@ S.value的初值表示系统中某种资源的数目。
 
 ### 信号量机制实现同步
 
-“让各个并发进程有序地推进”
+用信号量实现进程同步，“让各个并发进程有序地推进”:
+1. 分析什么地方需要实现“同步关系”,即必须保证“一前一后”执行的两个操作(或两句代码)
+2. 设置同步信号量S,初始为0
+3. 在“前操作”之后执行V(S)
+4. 在“后操作”之前执行P(S)
 
-![信号量机制实现同步](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/信号量机制实现同步.png)
-
-![信号量机制实现同步2](https://github.com/nilshao/cpp-notebook/raw/master/operation_system/images/chapter2/信号量机制实现同步2.png)
+若先执行到P(S)操作,由于S=0,S--后S=-1,表示此时没有可用资源,因此P操作中会执行 block原语,主动请求阻塞。之后当执行完代码2,继而执行V(S)操作,S++,使S变回0, 由于此时有进程在该信号量对应的阻塞队列中,因此会在V操作中执行 wakeup原语,唤醒P2进程。这样P2就可以继续
+执行代码4了。
 
 ### 信号量机制实现前驱关系
 
