@@ -1,4 +1,7 @@
 
+#ifndef linearList_
+#define linearList_
+
 #include <iostream>
 
 template <class T>
@@ -13,3 +16,4 @@ class linearList{
         virtual void insert(int theIndex, const T& theElement) = 0;
         virtual void output(ostream& out) const = 0;
 }
+#endif
