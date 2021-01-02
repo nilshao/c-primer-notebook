@@ -14,6 +14,6 @@ class linearList{
         virtual int indexOf(const T& theElement) const = 0;
         virtual void erase(int theIndex) = 0;
         virtual void insert(int theIndex, const T& theElement) = 0;
-        virtual void output(ostream& out) const = 0;
-}
+        virtual void output(std::ostream& out) const = 0;
+};
 #endif

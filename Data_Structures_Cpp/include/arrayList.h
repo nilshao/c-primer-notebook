@@ -26,7 +26,7 @@ class arrayList: public linearList<T> {
         int indexOf(const T& theElement) const;
         void erase(int theIndex);
         void insert(int theIndex, const T& theElement);
-        void output(ostream &out) const;
+        void output(std::ostream &out) const;
 
         //其他方法
         int capacity() const {return arrayLength;}
@@ -42,7 +42,7 @@ class arrayList: public linearList<T> {
 template<class T>                       //构造函数
 arrayList::arrayList(int initialCapacity){
     if(initialCapacity < 1){
-        ostringstream s;
+        std::ostringstream s;
         s << "Inital Capacity = " << initialCapacity << "Must be > 0" ;
         throw illegalParameterValue(s.str());
     }
@@ -83,7 +83,7 @@ int arrayList<T>::size() const {return listSize;}
 template<class T>  
 void arrayList<T>::checkIndex(int theIndex) const{
     if(theIndex < 0 || theIndex >= listSize){
-        ostringstream s;
+        std::ostringstream s;
         s << "index = " << theIndex << "size = " <<listSize;
         throw illegalIndex(s.str);
     }
@@ -115,7 +115,7 @@ void arrayList<T>::erase(int theIndex){
 template<class T>   
 void arrayList<T>::insert(int theIndex, const T& theElement){       //在索引theIndex处插入元素theElement
     if(theIndex < 0 || theIndex > listSize){
-        ostringstream s;
+        std::ostringstream s;
         s << "index = " << theIndex << "size = " << listSize;
         throw illegalIndex(s.str());
     }
@@ -135,12 +135,12 @@ void arrayList<T>::insert(int theIndex, const T& theElement){       //在索引t
 }
 
 template<class T>
-void arrayList<T>::output(ostream -> out) const{                      //把线性表插入输入流
+void arrayList<T>::output(std::ostream -> out) const{                      //把线性表插入输入流
     copy(element, element + listSize, ostream_iterator<T>(cout," "));
 }
 
 template<class T>   
-ostream& operator<<(ostream& out, const arrayList<T>& x){           //重载运算符<<
+std::ostream& operator<<(std::ostream& out, const arrayList<T>& x){           //重载运算符<<
     x.output(out);
     return out;
 }

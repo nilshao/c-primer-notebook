@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/arrayList.h
+arrayList.h
+../include/arrayList.h
+linearList.h
+../include/linearList.h
+iostream
+-
+sstream
+-
+string
+-
+algorithm
+-
+
+../include/linearList.h
+iostream
+-
+
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter05.cpp
+iostream
+-
+string
+-
+arrayList.h
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/arrayList.h
+linearList.h
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/linearList.h
+
