@@ -7,10 +7,6 @@
 #IncludeRegexTransform: 
 
 ../include/arrayList.h
-arrayList.h
-../include/arrayList.h
-linearList.h
-../include/linearList.h
 iostream
 -
 sstream
@@ -19,9 +15,25 @@ string
 -
 algorithm
 -
+arrayList.h
+../include/arrayList.h
+linearList.h
+../include/linearList.h
+myExceptions.h
+../include/myExceptions.h
+changeLength1D.h
+../include/changeLength1D.h
+
+../include/changeLength1D.h
+myExceptions.h
+../include/myExceptions.h
 
 ../include/linearList.h
 iostream
+-
+
+../include/myExceptions.h
+string
 -
 
 /Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter05.cpp
@@ -33,4 +45,6 @@ arrayList.h
 /Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/arrayList.h
 linearList.h
 /Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/linearList.h
+myExceptions.h
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/myExceptions.h
 

@@ -1,25 +1,27 @@
 #ifndef arrayList_
 #define arrayList_
 
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <algorithm>
+
 #include "arrayList.h"
 #include "linearList.h"
-#include <iostream>
-#include<sstream>
-#include<string>
-#include<algorithm>
+#include "myExceptions.h"
+#include "changeLength1D.h"
 
 template<class T>
 class arrayList: public linearList<T> {
     private:
-        int arrayLength = 0;
+      //  int arrayLength = 0;
 
     public:
-        arrayList(int){};
-        arrayList(const arrayList<T>&){};
-        ~arrayList(){};
+        arrayList(int initialCapacity = 10);
+        arrayList(const arrayList<T>&);
+        ~arrayList() {delete [] element;}
 
         //方法
-        void changeLength1D(T*& a, int oldLength, int newLength){
         bool empty() const {return listSize == 0;}
         int size() const {return listSize;}
         T& get(int theIndex) const;
@@ -28,8 +30,16 @@ class arrayList: public linearList<T> {
         void insert(int theIndex, const T& theElement);
         void output(std::ostream &out) const;
 
+        //重载操作符
+     //   std::ostream& operator<<(std::ostream& out, const arrayList<T> &theList);
+        T& operator[](const int);
+        bool operator==(const arrayList<T>&);
+        bool operator!=(const arrayList<T>&);
+
         //其他方法
         int capacity() const {return arrayLength;}
+        void push_back(const T& theElement);
+        void pop_back();
 
     protected:
         void checkIndex(int theIndex) const;        //若索引theIndex无效，则抛出异常
@@ -37,10 +47,10 @@ class arrayList: public linearList<T> {
         int arrayLength;                            //一维数组的容量
         int listSize;                               //线性表的元素个数
 
-}
+};
 
 template<class T>                       //构造函数
-arrayList::arrayList(int initialCapacity){
+arrayList<T>::arrayList(int initialCapacity){
     if(initialCapacity < 1){
         std::ostringstream s;
         s << "Inital Capacity = " << initialCapacity << "Must be > 0" ;
@@ -52,40 +62,19 @@ arrayList::arrayList(int initialCapacity){
 }
 
 template<class T>                                   
-arrayList::arrayList(const arrayList<T>& theList){                  //拷贝构造函数
+arrayList<T>::arrayList(const arrayList<T>& theList){                  //拷贝构造函数
     arrayLength = theList.arrayLength;
     listSize = theList.listSize;
     element = theList.element;
     copy(theList.element, theList.element + listSize, element);
 }
 
-~arrayList::arrayList(){
-    delete [] element
-}
-
-template<class T>   
-void changeLength1D(T*& a, int oldLength, int newLength){
-    if(newLength < 0)
-        throw illegalParameterValue("new length must be >=0");
-    T* temp = new T[newLength];
-    int number = min(oldLength,newLength);
-    copy(a, a+number, temp);
-    delete[] a;
-    a = temp;
-}
-
-template<class T>   
-bool arrayList<T>::empty() const {return listSize == 0;}
-
-template<class T>   
-int arrayList<T>::size() const {return listSize;}
-
 template<class T>  
 void arrayList<T>::checkIndex(int theIndex) const{
     if(theIndex < 0 || theIndex >= listSize){
         std::ostringstream s;
         s << "index = " << theIndex << "size = " <<listSize;
-        throw illegalIndex(s.str);
+        throw illegalIndex(s.str());
     }
 }
 
@@ -122,7 +111,7 @@ void arrayList<T>::insert(int theIndex, const T& theElement){       //在索引t
 
     //有效索引，确定数组是否已满
     if(listSize == arrayLength){        //数组空间已满，数组长度倍增
-        changeLength1D(element, arrayLength, 2* arrayLength);
+        changeLength1D(element, arrayLength, 2 * arrayLength);
         arrayLength *= 2;
     }
 
@@ -135,18 +124,69 @@ void arrayList<T>::insert(int theIndex, const T& theElement){       //在索引t
 }
 
 template<class T>
-void arrayList<T>::output(std::ostream -> out) const{                      //把线性表插入输入流
+void arrayList<T>::output(std::ostream& out) const{                      //把线性表插入输入流
     copy(element, element + listSize, ostream_iterator<T>(cout," "));
 }
 
 template<class T>   
-std::ostream& operator<<(std::ostream& out, const arrayList<T>& x){           //重载运算符<<
-    x.output(out);
+std::ostream& operator<<(std::ostream& out, const arrayList<T>& theList){           //重载运算符<<
+    theList.output(out);
     return out;
 }
 
+template<class T> 
+T& arrayList<T>::operator[](const int theIndex){
+    if(theIndex < 0 || theIndex > this->listSize){
+        std::ostringstream s;
+        s << "index = " << theIndex << "size = " << this->listSize;
+        throw illegalIndex(s.str());
+    }
+    return this->get(theIndex);
+}
 
+template<class T>   
+bool arrayList<T>::operator==(const arrayList<T>& list2){ 
+    
+    if(this->listSize != list2.listSize){ return false; }
+    for(int i=0; i<list2.listSize; i++){
+        if(this->get(i) != list2.get(i))  return false;
+    }
+    return true;
+}
+template<class T>   
+bool arrayList<T>::operator!=(const arrayList<T>& list2){ 
+    
+    if(this->listSize != list2.listSize){ return true; }
+    for(int i=0; i<list2.listSize; i++){
+        if(this->get(i) != list2.get(i))  return true;
+    }
+    return false;
+}
 
+template<class T>   
+void arrayList<T>::push_back(const T& theElement){
+
+    //有效索引，确定数组是否已满
+    if(listSize == arrayLength){        //数组空间已满，数组长度倍增
+        changeLength1D(element, arrayLength, 2 * arrayLength);
+        arrayLength *= 2;
+    }
+
+    //把元素依次向右移动一个位置
+    copy_backward(element + listSize, element + listSize, element + listSize + 1);
+
+    element[listSize] = theElement;
+    listSize ++;
+}
+    
+
+template<class T>   
+void arrayList<T>::pop_back(){
+
+    checkIndex(listSize-1);
+    element[--listSize].~T();
+
+}
 
 
 #endif

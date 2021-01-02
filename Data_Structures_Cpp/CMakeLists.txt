@@ -6,4 +6,4 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 
 add_executable(chapter05 src/chapter05.cpp )
-#target_compile_features(chapter05 PUBLIC cxx_std_17)
+target_compile_features(chapter05 PUBLIC cxx_std_17)
