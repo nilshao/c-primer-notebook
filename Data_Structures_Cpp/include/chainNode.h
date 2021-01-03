@@ -1,6 +1,8 @@
 #ifndef chainNode_
 #define chainNode_
 
+#include "myExceptions.h"
+
 template<class T>
 struct chainNode{
     //element

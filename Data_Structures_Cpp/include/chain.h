@@ -3,7 +3,11 @@
 #define chain_
 
 #include <iostream>
+#include <sstream>
+#include <string>
 #include "chainNode.h"
+#include "linearList.h"
+#include "myExceptions.h"
 
 template<class T>
 class chain : public linearList<T>{
@@ -27,7 +31,12 @@ public:
     void insert(int theIndex, const T& theElement);
     void output(std::ostream& out) const;
 
-}
+    //exercises
+    void setSize(int theSize);
+    void set(const int theIndex, const T& theElement);
+
+    int lastIndexOf(const T& theElement);
+};
 
 template<class T>
 chain<T>::chain(int initialCapacity){
@@ -69,16 +78,73 @@ chain<T>::~chain(){
     firstNode = nextNode;
     }
 }
+template<class T>  
+void chain<T>::checkIndex(int theIndex) const{
+    if(theIndex < 0 || theIndex >= listSize){
+        std::ostringstream s;
+        s << "index = " << theIndex << "size = " <<listSize;
+        throw illegalIndex(s.str());
+    }
+}
+template<class T>
+T& chain<T>::get(int theIndex) const{
+    checkIndex(theIndex);
+    chainNode<T>* currentNode = firstNode;
+    for(int i = 0; i<theIndex; i++){
+        currentNode = currentNode -> next;
+    }
+    return currentNode -> element;
+}
 
 template<class T>
-T& chain<T>::get(index)
+int chain<T>::indexOf(const T& theElement) const{       //元素theElement首次出现时的索引
+    chainNode<T>* currentNode = firstNode;
+    int index = 0;
+    while (currentNode != NULL && currentNode -> element!= theElement){
+        currentNode = currentNode -> next;
+        index++;
+    }
+    if(currentNode == NULL){    return -1;  }
+    else{   return index;  }
+}
 
+template<class T>
+void chain<T>::erase(int theIndex){
+    checkIndex(theIndex);
+    chainNode<T>* deleteNode;
+    if(theIndex ==0 ){
+        deleteNode = firstNode;
+        firstNode = firstNode -> next;
+    }else{
+        chainNode<T>* p = firstNode;
+        for(int i = 0; i< theIndex - 1; i++){   p = p -> next; }
+        deleteNode = p -> next;
+        p -> next = p -> next -> next;
+    }
+    listSize--;
+    delete deleteNode;
+}
 
 template<class T>
 void chain<T>::insert(int theIndex, const T& theElement){
-    
-}
+    if (theIndex < 0 || theIndex > listSize)
+    {
+        ostringstream s;
+        s << "index = " << theIndex << " size = " << listSize;
+        throw illegalIndex(s.str());
+    }
 
+    if(theIndex == 0)   {   firstNode = new chainNode<T>(theElement,firstNode); }
+    else{
+        chainNode<T>* p = firstNode;
+        for(int i = 0; i< theIndex -1; i++){    p = p->next; }
+        p->next = new chainNode<T>(theElement, p-> next);
+    }
+    listSize++;
+}
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
 template<class T>
 void chain<T>::output(std::ostream& out) const{
     for(chainNode<T>* currentNode = firstNode;
@@ -87,11 +153,45 @@ void chain<T>::output(std::ostream& out) const{
     std::cout << currentNode -> element << " ";
 
 }
+
 template<class T>
 std::ostream& operator<<(std::ostream& out, const chain<T>& x)
     {x.output(out);return out;}
 
+template<class T>
+void chain<T>::setSize(int theSize){
+    if(theSize <= listSize) return;
+    std::cout << "i need to give new nodes: "<< theSize - listSize <<std::endl;
 
+    T val;
+    int insertTimes = theSize - listSize;
+    for(int i=0; i< insertTimes; i++)
+        this->insert(listSize , val);
+}
 
+template<class T>
+void chain<T>::set(int theIndex, const T& theElement){
+    checkIndex(theIndex);
+    chainNode<T>* n = firstNode;
+    for(int i=0; i<theIndex; i++){
+        n = n -> next;
+    }
+    n->element = theElement;
+}
+
+//05
+template<class T>
+int chain<T>::lastIndexOf(const T& theElement){
+    int lastIndex = -1;
+    int currIndex = 0;
+    while(firstNode){
+        if(firstNode->element == theElement){
+            lastIndex = currIndex;
+        }
+        firstNode = firstNode -> next;
+        currIndex++;
+    }
+    return lastIndex;
+}
 
 #endif

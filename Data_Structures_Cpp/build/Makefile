@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named chain
+
+# Build rule for target.
+chain: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chain
+.PHONY : chain
+
+# fast build rule for target.
+chain/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain.dir/build.make CMakeFiles/chain.dir/build
+.PHONY : chain/fast
+
+#=============================================================================
 # Target rules for targets named chapter05
 
 # Build rule for target.
@@ -142,32 +155,59 @@ chapter05/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter05.dir/build.make CMakeFiles/chapter05.dir/build
 .PHONY : chapter05/fast
 
-src/chapter05.o: src/chapter05.cpp.o
+src/chapter05/chapter05.o: src/chapter05/chapter05.cpp.o
 
-.PHONY : src/chapter05.o
+.PHONY : src/chapter05/chapter05.o
 
 # target to build an object file
-src/chapter05.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter05.dir/build.make CMakeFiles/chapter05.dir/src/chapter05.cpp.o
-.PHONY : src/chapter05.cpp.o
+src/chapter05/chapter05.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter05.dir/build.make CMakeFiles/chapter05.dir/src/chapter05/chapter05.cpp.o
+.PHONY : src/chapter05/chapter05.cpp.o
 
-src/chapter05.i: src/chapter05.cpp.i
+src/chapter05/chapter05.i: src/chapter05/chapter05.cpp.i
 
-.PHONY : src/chapter05.i
+.PHONY : src/chapter05/chapter05.i
 
 # target to preprocess a source file
-src/chapter05.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter05.dir/build.make CMakeFiles/chapter05.dir/src/chapter05.cpp.i
-.PHONY : src/chapter05.cpp.i
+src/chapter05/chapter05.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter05.dir/build.make CMakeFiles/chapter05.dir/src/chapter05/chapter05.cpp.i
+.PHONY : src/chapter05/chapter05.cpp.i
 
-src/chapter05.s: src/chapter05.cpp.s
+src/chapter05/chapter05.s: src/chapter05/chapter05.cpp.s
 
-.PHONY : src/chapter05.s
+.PHONY : src/chapter05/chapter05.s
 
 # target to generate assembly for a file
-src/chapter05.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter05.dir/build.make CMakeFiles/chapter05.dir/src/chapter05.cpp.s
-.PHONY : src/chapter05.cpp.s
+src/chapter05/chapter05.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter05.dir/build.make CMakeFiles/chapter05.dir/src/chapter05/chapter05.cpp.s
+.PHONY : src/chapter05/chapter05.cpp.s
+
+src/chapter06/chain.o: src/chapter06/chain.cpp.o
+
+.PHONY : src/chapter06/chain.o
+
+# target to build an object file
+src/chapter06/chain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain.dir/build.make CMakeFiles/chain.dir/src/chapter06/chain.cpp.o
+.PHONY : src/chapter06/chain.cpp.o
+
+src/chapter06/chain.i: src/chapter06/chain.cpp.i
+
+.PHONY : src/chapter06/chain.i
+
+# target to preprocess a source file
+src/chapter06/chain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain.dir/build.make CMakeFiles/chain.dir/src/chapter06/chain.cpp.i
+.PHONY : src/chapter06/chain.cpp.i
+
+src/chapter06/chain.s: src/chapter06/chain.cpp.s
+
+.PHONY : src/chapter06/chain.s
+
+# target to generate assembly for a file
+src/chapter06/chain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chain.dir/build.make CMakeFiles/chain.dir/src/chapter06/chain.cpp.s
+.PHONY : src/chapter06/chain.cpp.s
 
 # Help Target
 help:
@@ -177,10 +217,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... chain"
 	@echo "... chapter05"
-	@echo "... src/chapter05.o"
-	@echo "... src/chapter05.i"
-	@echo "... src/chapter05.s"
+	@echo "... src/chapter05/chapter05.o"
+	@echo "... src/chapter05/chapter05.i"
+	@echo "... src/chapter05/chapter05.s"
+	@echo "... src/chapter06/chain.o"
+	@echo "... src/chapter06/chain.i"
+	@echo "... src/chapter06/chain.s"
 .PHONY : help
 
 

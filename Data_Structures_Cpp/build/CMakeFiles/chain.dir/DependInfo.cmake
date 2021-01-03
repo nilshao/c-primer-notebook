@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter05/chapter05.cpp" "/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/build/CMakeFiles/chapter05.dir/src/chapter05/chapter05.cpp.o"
+  "/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/chain.cpp" "/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/build/CMakeFiles/chain.dir/src/chapter06/chain.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

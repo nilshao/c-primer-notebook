@@ -36,15 +36,15 @@ iostream
 string
 -
 
-/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter05.cpp
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter05/chapter05.cpp
 iostream
 -
 string
 -
 arrayList.h
-/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/arrayList.h
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter05/arrayList.h
 linearList.h
-/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/linearList.h
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter05/linearList.h
 myExceptions.h
-/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/myExceptions.h
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter05/myExceptions.h
 

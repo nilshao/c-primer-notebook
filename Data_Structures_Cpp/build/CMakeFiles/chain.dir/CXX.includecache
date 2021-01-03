@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/chain.h
+iostream
+-
+sstream
+-
+string
+-
+chainNode.h
+../include/chainNode.h
+linearList.h
+../include/linearList.h
+myExceptions.h
+../include/myExceptions.h
+
+../include/chainNode.h
+myExceptions.h
+../include/myExceptions.h
+
+../include/linearList.h
+iostream
+-
+
+../include/myExceptions.h
+string
+-
+
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/chain.cpp
+iostream
+-
+string
+-
+chain.h
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/chain.h
+chainNode.h
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/chainNode.h
+myExceptions.h
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/myExceptions.h
+
