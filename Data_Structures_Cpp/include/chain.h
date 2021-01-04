@@ -8,6 +8,7 @@
 #include <vector>
 #include "chainNode.h"
 #include "linearList.h"
+#include "arrayList.h"
 #include "myExceptions.h"
 
 template<class T>
@@ -38,9 +39,20 @@ public:
     void set(const int theIndex, const T& theElement);
 
     int lastIndexOf(const T& theElement);
+    void swap(chain<T>& chain2);
+
     T& operator[](const int theIndex);
     bool operator!=(const chain<T>& list2);
     bool operator==(const chain<T>& list2);
+    bool operator<(const chain<T>& list2);
+  //  void swap(chain<T> theChain);
+    chain<T> arrayList2Chain(arrayList<T> const & theArray);
+//
+    void leftShift(int const theIndex);
+
+
+
+
 };
 
 template<class T>
@@ -82,16 +94,13 @@ chain<T>::chain(const std::vector<T>& theVector){
         return;
     }
     firstNode = new chainNode<T>(theVector[0]);
-    chainNode<T> *n = firstNode;
-    for(int i = 0; i < listSize; ++i){
-        n->element = theVector[i];
-        if(i+1<listSize){
-            chainNode<T> *m = new chainNode<T>;
-            n->next = m;
-        }else{
-            n->next = NULL;
-        }
+    chainNode<T> *targetNode = firstNode;
+    for(int i = 1; i < listSize; ++i){
+        targetNode->next = new chainNode<T>(theVector[i]);
+        targetNode = targetNode->next;
+        
     }
+    targetNode->next = NULL;
 
 }
 
@@ -227,7 +236,7 @@ T& chain<T>::operator[](const int theIndex){
     checkIndex(theIndex);
     return this->get(theIndex);
 }
-/*
+
 template<class T>   
 bool chain<T>::operator==(const chain<T>& list2){ 
     
@@ -246,5 +255,65 @@ bool chain<T>::operator!=(const chain<T>& list2){
     }
     return false;
 }
-*/
+//09
+template<class T>   
+bool chain<T>::operator<(const chain<T>& list2){ 
+    
+    chainNode<T> n1 = this->firstNode;
+    chainNode<T> n2 = list2.firstNode;
+    
+    while(n1 && n2){
+        if((n1.element) > (n2. element)){
+            return false;
+        }else if((n1.element) > (n2. element)){
+            return true;
+        }else{
+            n1 = n1->next;
+            n2 = n2->next;
+        }
+    }
+
+    if(n2==NULL)    return false;
+    if(n1==NULL)    return true;
+    
+
+    return false;
+}
+// 10 swap
+template<class T>
+void chain<T>::swap(chain<T>& chain2){
+    chainNode<T> *tmp = this->firstNode;
+    chainNode<T> *n1 = this->firstNode;
+    chainNode<T> *n2 = chain2.firstNode;
+    n1 = n2;
+    n2 = tmp;
+    
+}
+
+
+
+
+template<class T>
+chain<T> chain<T>::arrayList2Chain(arrayList<T> const & theArray){
+    chain<T>* n;
+    n = this;
+    
+    for(int i=0; i< theArray.size(); i++){
+        T ele = theArray.get(i);
+        n->insert(n->size(), ele);
+    }
+    
+    return *n;
+}
+template<class T>
+void chain<T>::leftShift(int theIndex){
+    if(theIndex>=this->size()){
+        this->firstNode = NULL;
+        return ;
+    }
+    for(int i=0; i<theIndex; ++i){
+        this->firstNode = this->firstNode->next;
+    }
+}
+
 #endif

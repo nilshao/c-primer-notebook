@@ -1,11 +1,33 @@
 #include <iostream>
 #include <string>
-
 #include <vector>
 
 #include "chain.h"
 #include "chainNode.h"
-#include "myExceptions.h"
+#include "arrayList.h"
+
+void Exercise(int const n){
+    std::cout << "-------------"<< "Question "<< n  << "-------------" << std::endl;
+}
+template<class T> 
+void arrayList2Chain(arrayList<T> const & theArray,chain<T>& theChain){
+    
+    for(int i=0; i< theArray.size(); i++){
+        T ele = theArray.get(i);
+        theChain.insert(theChain.size(), ele);
+    }
+
+}
+template<class T> 
+void Chain2arrayList(chain<T>const & theChain,arrayList<T> & theArray){
+    
+    for(int i=0; i< theChain.size(); i++){
+        T ele = theChain.get(i);
+        theArray.insert(theArray.size(), ele);
+    }
+
+}
+
 
 int main(){
     chain<char> L;
@@ -45,6 +67,7 @@ int main(){
     //04
 
     //05
+    Exercise(05);
     L.insert(L.size(),'b');
     std::cout <<"vector L: "<< L << std::endl;
     int lastIndex;
@@ -54,17 +77,95 @@ int main(){
     std::cout << "last index of char '?' is: " << lastIndex << std::endl;
 
     //06
+    Exercise(06);
     std::cout <<"test overload operator [], L[1] = '" <<  L[1] <<"'"<<std::endl;
 
-    //07
-    std::vector<char> v = {'a','b','c','d','e'};
-    chain<char> L2(v);
-    std::cout << L2 <<std::endl;
+    //07, 08
+    Exercise(07);
+    std::vector<char> v1 = {'a','b','k','c','e','h','b'};
+    std::vector<char> v2 = {'a','b','*','c','e','h','b'};
+    chain<char> L1(v1);
+    chain<char> L2(v2);
+    std::cout << "chain l is: " << L <<std::endl;
+    std::cout << "chain l1 is: "<< L1 <<std::endl;
+    std::cout << "chain l2 is: "<< L2 <<std::endl;
+  
+    std::cout << "test overload operator ==," << "L == L1? " << (L == L1) << std::endl;
+    std::cout << "test overload operator ==," << "L == L2? " << (L == L2) << std::endl;
+    std::cout << "test overload operator !=," << "L != L1? " << (L != L1) << std::endl;
+    std::cout << "test overload operator !=," << "L != L2? " << (L != L2) << std::endl;
+
+    //09
+    Exercise(9);
+    std::vector<char> w1 = {'a','b','c','d','e','f','g'};
+    std::vector<char> w2 = {'a','b','c','d','e','f','g'};
+    std::vector<char> w3 = {'a','b','d','c','e','h','b'};
+    std::vector<char> w4 = {'a','b','c'};
+
+    chain<char> Word1(w1);
+    chain<char> Word2(w2);
+    chain<char> Word3(w3);
+    chain<char> Word4(w4);
+    std::cout << "word1 is: "<< Word1 << std::endl;
+    std::cout << "word2 is: "<< Word2 << std::endl;
+    std::cout << "word3 is: "<< Word3 << std::endl;
+    std::cout << "word4 is: "<< Word4 << std::endl;
+    std::cout << "w1 < w2? " << (w1<w2) << std::endl;
+    std::cout << "w2 < w3? " << (w2<w3) << std::endl;
+    std::cout << "w3 < w2? " << (w3<w2) << std::endl;
+    std::cout << "w4 < w1? " << (w4<w1) << std::endl;
+    std::cout << "w1 < w4? " << (w1<w4) << std::endl;
 
 
+    //10 swap
+    
+    Exercise(10);
+    std::vector<char> v3 = {'a','b','k','c','e','h','b'};
+    std::vector<char> v4 = {'g','d','h','e','k','b','l'};
+    chain<char> L3(v3);
+    chain<char> L4(v4);
+    std::cout << L3 << std::endl;
+    std::cout << L4 << std::endl;
+    L3.swap(L4);
+    std::cout << L3 << std::endl;
+    std::cout << L4 << std::endl;
 
+    //11: arrayList to chain
+    Exercise(11);
 
+    arrayList<char> f(5);
+    f.insert(0,'e');
+    f.insert(0,'d');
+    f.insert(0,'c');
+    f.insert(0,'b');
+    f.insert(0,'a');
 
+    std::cout << "arrayList f is: " << f << std::endl;
+    chain<char> f_chain(10);
+    arrayList2Chain(f,f_chain);
+    std::cout <<"changed to chain: "<<f_chain<<std::endl;
+    std::cout <<f_chain.size()<<std::endl;
+
+    arrayList<char> f_array(10);
+    Chain2arrayList(f_chain,f_array);
+    std::cout <<"changed to array: "<<f_array<<std::endl;
+ //   std::cout <<f_chain.size()<<std::endl;
+
+    chain<char> f_chain_2(10);
+    f_chain_2.arrayList2Chain(f_array);
+    std::cout << f_chain_2 << std::endl;
+
+    //14
+    Exercise(14);
+    std::cout <<"the list before left shift: " << f_chain_2 << std::endl;
+    f_chain_2.leftShift(1) ;
+    std::cout <<"the list after left shift for 1 position: "<< f_chain_2 <<std::endl;
+    f_chain_2.leftShift(5) ;
+    std::cout <<"the list after left shift too much! "<< f_chain_2 <<std::endl;
+
+    //reverse 1:迭代
+
+    //reverse 2:递归
 
 
 }

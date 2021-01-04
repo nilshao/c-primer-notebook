@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+../include/arrayList.h
+iostream
+-
+sstream
+-
+string
+-
+algorithm
+-
+arrayList.h
+../include/arrayList.h
+linearList.h
+../include/linearList.h
+myExceptions.h
+../include/myExceptions.h
+changeLength1D.h
+../include/changeLength1D.h
+
 ../include/chain.h
 iostream
 -
@@ -19,10 +37,16 @@ chainNode.h
 ../include/chainNode.h
 linearList.h
 ../include/linearList.h
+arrayList.h
+../include/arrayList.h
 myExceptions.h
 ../include/myExceptions.h
 
 ../include/chainNode.h
+myExceptions.h
+../include/myExceptions.h
+
+../include/changeLength1D.h
 myExceptions.h
 ../include/myExceptions.h
 
@@ -45,6 +69,6 @@ chain.h
 /Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/chain.h
 chainNode.h
 /Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/chainNode.h
-myExceptions.h
-/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/myExceptions.h
+arrayList.h
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/arrayList.h
 
