@@ -36,6 +36,9 @@ public:
     void set(const int theIndex, const T& theElement);
 
     int lastIndexOf(const T& theElement);
+    T& operator[](const int theIndex);
+    bool operator!=(const chain<T>& list2);
+    bool operator==(const chain<T>& list2);
 };
 
 template<class T>
@@ -192,6 +195,31 @@ int chain<T>::lastIndexOf(const T& theElement){
         currIndex++;
     }
     return lastIndex;
+}
+
+template<class T> 
+T& chain<T>::operator[](const int theIndex){
+    checkIndex(theIndex);
+    return this->get(theIndex);
+}
+
+template<class T>   
+bool chain<T>::operator==(const chain<T>& list2){ 
+    
+    if(this->listSize != list2.listSize){ return false; }
+    for(int i=0; i<list2.listSize; i++){
+        if(this->get(i) != list2.get(i))  return false;
+    }
+    return true;
+}
+template<class T>   
+bool chain<T>::operator!=(const chain<T>& list2){ 
+    
+    if(this->listSize != list2.listSize){ return true; }
+    for(int i=0; i<list2.listSize; i++){
+        if(this->get(i) != list2.get(i))  return true;
+    }
+    return false;
 }
 
 #endif

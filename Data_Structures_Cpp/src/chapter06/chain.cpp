@@ -49,4 +49,8 @@ int main(){
     std::cout << "last index of char 'b' is: " << lastIndex << std::endl;
     lastIndex = L.lastIndexOf('?');
     std::cout << "last index of char '?' is: " << lastIndex << std::endl;
+
+
+
+    std::cout << L[1] <<std::endl;
 }
