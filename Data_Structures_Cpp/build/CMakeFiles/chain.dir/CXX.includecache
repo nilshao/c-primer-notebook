@@ -13,6 +13,8 @@ sstream
 -
 string
 -
+vector
+-
 chainNode.h
 ../include/chainNode.h
 linearList.h
@@ -36,6 +38,8 @@ string
 iostream
 -
 string
+-
+vector
 -
 chain.h
 /Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/chain.h

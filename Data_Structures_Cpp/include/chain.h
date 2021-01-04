@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <vector>
 #include "chainNode.h"
 #include "linearList.h"
 #include "myExceptions.h"
@@ -20,6 +21,7 @@ public:
     //构造函数，析构函数
     chain(int initialCapacity = 10);
     chain(const chain<T>&);
+    chain(const std::vector<T>&);
     ~chain();
 
     //方法
@@ -73,6 +75,28 @@ chain<T>::chain(const chain<T>& theList){           //拷贝构造
 }
 
 template<class T>
+chain<T>::chain(const std::vector<T>& theVector){
+    listSize = theVector.size();
+    if(listSize ==0){
+        firstNode = NULL;
+        return;
+    }
+    firstNode = new chainNode<T>(theVector[0]);
+    chainNode<T> *n = firstNode;
+    for(int i = 0; i < listSize; ++i){
+        n->element = theVector[i];
+        if(i+1<listSize){
+            chainNode<T> *m = new chainNode<T>;
+            n->next = m;
+        }else{
+            n->next = NULL;
+        }
+    }
+
+}
+
+
+template<class T>
 chain<T>::~chain(){
     while (firstNode != NULL){
         chainNode<T>* nextNode = firstNode->next;
@@ -93,7 +117,7 @@ template<class T>
 T& chain<T>::get(int theIndex) const{
     checkIndex(theIndex);
     chainNode<T>* currentNode = firstNode;
-    for(int i = 0; i<theIndex; i++){
+    for(int i = 0; i < theIndex; i++){
         currentNode = currentNode -> next;
     }
     return currentNode -> element;
@@ -187,11 +211,12 @@ template<class T>
 int chain<T>::lastIndexOf(const T& theElement){
     int lastIndex = -1;
     int currIndex = 0;
-    while(firstNode){
-        if(firstNode->element == theElement){
+    chainNode<T>* n = firstNode;
+    while(n){
+        if(n->element == theElement){
             lastIndex = currIndex;
         }
-        firstNode = firstNode -> next;
+        n = n-> next;
         currIndex++;
     }
     return lastIndex;
@@ -202,7 +227,7 @@ T& chain<T>::operator[](const int theIndex){
     checkIndex(theIndex);
     return this->get(theIndex);
 }
-
+/*
 template<class T>   
 bool chain<T>::operator==(const chain<T>& list2){ 
     
@@ -221,5 +246,5 @@ bool chain<T>::operator!=(const chain<T>& list2){
     }
     return false;
 }
-
+*/
 #endif
