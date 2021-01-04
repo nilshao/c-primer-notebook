@@ -17,6 +17,7 @@ protected:
     void checkIndex(int theIndex) const;        //若索引theIndex无效，则抛出异常
     chainNode<T>* firstNode;                                 //指向头节点的指针
     int listSize;                               //链表的元素个数
+
 public:
 
     //构造函数，析构函数
@@ -33,6 +34,50 @@ public:
     void erase(int theIndex);
     void insert(int theIndex, const T& theElement);
     void output(std::ostream& out) const;
+    chain<T> meld(chain<T> c2);
+
+    // iterators to start and end of list
+    class iterator;
+    iterator begin() {return iterator(firstNode);}
+    iterator end() {return iterator(NULL);}
+    
+      // iterator for chain
+      class iterator 
+      {
+         public:
+            // typedefs required by C++ for a forward iterator
+            typedef forward_iterator_tag iterator_category;
+            typedef T value_type;
+            typedef ptrdiff_t difference_type;
+            typedef T* pointer;
+            typedef T& reference;
+
+            // constructor
+            iterator(chainNode<T>* theNode = NULL)
+               {node = theNode;}
+
+            // dereferencing operators
+            T& operator*() const {return node->element;}
+            T* operator->() const {return &node->element;}
+
+            // increment
+            iterator& operator++()   // preincrement
+                      {node = node->next; return *this;}
+            iterator operator++(int) // postincrement
+            	      {iterator old = *this;
+            	       node = node->next;
+            	       return old;
+            	      }
+
+            // equality testing
+            bool operator!=(const iterator right) const
+                  {return node != right.node;}
+            bool operator==(const iterator right) const
+                  {return node == right.node;}
+         protected:
+            chainNode<T>* node;
+      };  // end of iterator class
+
 
     //exercises
     void setSize(int theSize);
@@ -315,5 +360,20 @@ void chain<T>::leftShift(int theIndex){
         this->firstNode = this->firstNode->next;
     }
 }
+//18
+template<class T>
+chain<T> chain<T>::meld(chain<T> c2){
+    
+    chainNode<T>* currentNode1 = this->firstNode;
+    chainNode<T>* currentNode2 = c2.firstNode;
+    if(currentNode1 != NULL &&  currentNode2 !=NULL){
+        chainNode<T>* tmpNode = currentNode1 -> next;
+        currentNode1 -> next = currentNode2;
+        currentNode2 = currentNode2-> next;
+        currentNode1 = tmpNode;
+    }
+    return *this;
+}
+
 
 #endif

@@ -5,6 +5,8 @@ CMakeFiles/chain.dir/src/chapter06/chain.cpp.o: ../include/arrayList.h
 CMakeFiles/chain.dir/src/chapter06/chain.cpp.o: ../include/chain.h
 CMakeFiles/chain.dir/src/chapter06/chain.cpp.o: ../include/chainNode.h
 CMakeFiles/chain.dir/src/chapter06/chain.cpp.o: ../include/changeLength1D.h
+CMakeFiles/chain.dir/src/chapter06/chain.cpp.o: ../include/extendedChain.h
+CMakeFiles/chain.dir/src/chapter06/chain.cpp.o: ../include/extendedLinearList.h
 CMakeFiles/chain.dir/src/chapter06/chain.cpp.o: ../include/linearList.h
 CMakeFiles/chain.dir/src/chapter06/chain.cpp.o: ../include/myExceptions.h
 CMakeFiles/chain.dir/src/chapter06/chain.cpp.o: ../src/chapter06/chain.cpp

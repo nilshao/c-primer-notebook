@@ -143,44 +143,44 @@ chain/fast:
 .PHONY : chain/fast
 
 #=============================================================================
-# Target rules for targets named chapter05
+# Target rules for targets named arrayList
 
 # Build rule for target.
-chapter05: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chapter05
-.PHONY : chapter05
+arrayList: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 arrayList
+.PHONY : arrayList
 
 # fast build rule for target.
-chapter05/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter05.dir/build.make CMakeFiles/chapter05.dir/build
-.PHONY : chapter05/fast
+arrayList/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/arrayList.dir/build.make CMakeFiles/arrayList.dir/build
+.PHONY : arrayList/fast
 
-src/chapter05/chapter05.o: src/chapter05/chapter05.cpp.o
+src/chapter05/arrayList.o: src/chapter05/arrayList.cpp.o
 
-.PHONY : src/chapter05/chapter05.o
+.PHONY : src/chapter05/arrayList.o
 
 # target to build an object file
-src/chapter05/chapter05.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter05.dir/build.make CMakeFiles/chapter05.dir/src/chapter05/chapter05.cpp.o
-.PHONY : src/chapter05/chapter05.cpp.o
+src/chapter05/arrayList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/arrayList.dir/build.make CMakeFiles/arrayList.dir/src/chapter05/arrayList.cpp.o
+.PHONY : src/chapter05/arrayList.cpp.o
 
-src/chapter05/chapter05.i: src/chapter05/chapter05.cpp.i
+src/chapter05/arrayList.i: src/chapter05/arrayList.cpp.i
 
-.PHONY : src/chapter05/chapter05.i
+.PHONY : src/chapter05/arrayList.i
 
 # target to preprocess a source file
-src/chapter05/chapter05.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter05.dir/build.make CMakeFiles/chapter05.dir/src/chapter05/chapter05.cpp.i
-.PHONY : src/chapter05/chapter05.cpp.i
+src/chapter05/arrayList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/arrayList.dir/build.make CMakeFiles/arrayList.dir/src/chapter05/arrayList.cpp.i
+.PHONY : src/chapter05/arrayList.cpp.i
 
-src/chapter05/chapter05.s: src/chapter05/chapter05.cpp.s
+src/chapter05/arrayList.s: src/chapter05/arrayList.cpp.s
 
-.PHONY : src/chapter05/chapter05.s
+.PHONY : src/chapter05/arrayList.s
 
 # target to generate assembly for a file
-src/chapter05/chapter05.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/chapter05.dir/build.make CMakeFiles/chapter05.dir/src/chapter05/chapter05.cpp.s
-.PHONY : src/chapter05/chapter05.cpp.s
+src/chapter05/arrayList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/arrayList.dir/build.make CMakeFiles/arrayList.dir/src/chapter05/arrayList.cpp.s
+.PHONY : src/chapter05/arrayList.cpp.s
 
 src/chapter06/chain.o: src/chapter06/chain.cpp.o
 
@@ -217,11 +217,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... arrayList"
 	@echo "... chain"
-	@echo "... chapter05"
-	@echo "... src/chapter05/chapter05.o"
-	@echo "... src/chapter05/chapter05.i"
-	@echo "... src/chapter05/chapter05.s"
+	@echo "... src/chapter05/arrayList.o"
+	@echo "... src/chapter05/arrayList.i"
+	@echo "... src/chapter05/arrayList.s"
 	@echo "... src/chapter06/chain.o"
 	@echo "... src/chapter06/chain.i"
 	@echo "... src/chapter06/chain.s"

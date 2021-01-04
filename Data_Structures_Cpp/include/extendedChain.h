@@ -11,7 +11,7 @@
 #include <string>
 #include <vector>
 #include "extendedLinearList.h"
-#include "chainWithIterator.h"
+#include "chain.h"
 #include "myExceptions.h"
 
 using namespace std;
@@ -25,6 +25,8 @@ class extendedChain : public extendedLinearList<T>, public chain<T>
          chain<T>(initialCapacity) {}
       extendedChain(const extendedChain<T>& c) :
          chain<T>(c) {}
+      extendedChain(const std::vector<T>& vec) :
+         chain<T>(vec) {}
 
       // ADT methods
       bool empty() const {return listSize == 0;}
@@ -44,20 +46,31 @@ class extendedChain : public extendedLinearList<T>, public chain<T>
                firstNode = nextNode;
             }
             listSize = 0;
-         }
-      void push_back(const T& theElement);
+         } 
+    
+      void push_back(const T& theElement);//
       void output(ostream& out) const
          {chain<T>::output(out);}
-
+   
       // additional method
       void zero()
          {firstNode = NULL; listSize = 0;}
       
    protected:
+      void checkIndex(int theIndex) const;
+      chainNode<T>* firstNode = chain<T>::firstNode;                                 //指向头节点的指针
+      int listSize = chain<T>::listSize;                               //链表的元素个数
       chainNode<T>* lastNode;  // pointer to last node in chain
 };
 
-
+template<class T>  
+void extendedChain<T>::checkIndex(int theIndex) const{
+    if(theIndex < 0 || theIndex >= listSize){
+        std::ostringstream s;
+        s << "index = " << theIndex << "size = " <<listSize;
+        throw illegalIndex(s.str());
+    }
+}
 template<class T>
 void extendedChain<T>::erase(int theIndex)
 {// Delete the element whose index is theIndex.

@@ -5,6 +5,7 @@
 #include "chain.h"
 #include "chainNode.h"
 #include "arrayList.h"
+#include "extendedChain.h"
 
 void Exercise(int const n){
     std::cout << "-------------"<< "Question "<< n  << "-------------" << std::endl;
@@ -18,6 +19,7 @@ void arrayList2Chain(arrayList<T> const & theArray,chain<T>& theChain){
     }
 
 }
+
 template<class T> 
 void Chain2arrayList(chain<T>const & theChain,arrayList<T> & theArray){
     
@@ -27,8 +29,24 @@ void Chain2arrayList(chain<T>const & theChain,arrayList<T> & theArray){
     }
 
 }
+/*
+template<class T>
+extendedChain<T> meld(extendedChain<T> m1, extendedChain<T> m2){
+    extendedChain<T> m;
+    
+    int min = (m1.size() < m2.size())? m1.size() : m2.size();
+    for(int i = 0; i < min; ++i){
+        std::cout<< " "<< m1[i] << " " << m2[i];
+        std::cout << " " << m.size() ;
+        m.push_back(m1[i]);
+        std::cout << " " << m.size() <<std::endl;
 
-
+        m.push_back(m2[i]);
+        std::cout << m <<std::endl;
+    }
+    return m;
+} 
+*/
 int main(){
     chain<char> L;
 
@@ -167,5 +185,23 @@ int main(){
 
     //reverse 2:递归
 
+    //17
+    Exercise(17);
+    std::vector<char> va = {'a','c','e','g','i'};
+    std::vector<char> vb = {'b','d','f','h','j','k','l'};
+    extendedChain<char> a(va);
+    extendedChain<char> b(vb);
+
+    extendedChain<char> m1(10);
+    std::cout << "vector a is: " << a << std::endl;
+    std::cout << "vector b is: " << b << std::endl;
+    std::cout << "vector m is: " << m1 << std::endl;
+
+    Exercise(18);
+    chain<char> c1(va);
+    chain<char> c2(vb);
+    std::cout << "chain 1 is: "<< c1 <<std::endl;
+    std::cout << "chain 2 is: "<< c2 <<std::endl;
+    std::cout << c1.meld(c2) << std::endl;
 
 }

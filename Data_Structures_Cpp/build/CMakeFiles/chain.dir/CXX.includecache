@@ -15,6 +15,8 @@ string
 -
 algorithm
 -
+iterator
+-
 arrayList.h
 ../include/arrayList.h
 linearList.h
@@ -50,6 +52,28 @@ myExceptions.h
 myExceptions.h
 ../include/myExceptions.h
 
+../include/extendedChain.h
+iostream
+-
+sstream
+-
+string
+-
+vector
+-
+extendedLinearList.h
+../include/extendedLinearList.h
+chain.h
+../include/chain.h
+myExceptions.h
+../include/myExceptions.h
+
+../include/extendedLinearList.h
+iostream
+-
+linearList.h
+../include/linearList.h
+
 ../include/linearList.h
 iostream
 -
@@ -71,4 +95,6 @@ chainNode.h
 /Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/chainNode.h
 arrayList.h
 /Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/arrayList.h
+extendedChain.h
+/Users/sibohao/Desktop/notebooks/notebook_cpp/Data_Structures_Cpp/src/chapter06/extendedChain.h
 
