@@ -41,42 +41,42 @@ public:
     iterator begin() {return iterator(firstNode);}
     iterator end() {return iterator(NULL);}
     
-      // iterator for chain
-      class iterator 
-      {
-         public:
-            // typedefs required by C++ for a forward iterator
-            typedef forward_iterator_tag iterator_category;
-            typedef T value_type;
-            typedef ptrdiff_t difference_type;
-            typedef T* pointer;
-            typedef T& reference;
+    // iterator for chain
+    class iterator 
+    {
+        public:
+        // typedefs required by C++ for a forward iterator
+        typedef forward_iterator_tag iterator_category;
+        typedef T value_type;
+        typedef ptrdiff_t difference_type;
+        typedef T* pointer;
+        typedef T& reference;
 
-            // constructor
-            iterator(chainNode<T>* theNode = NULL)
-               {node = theNode;}
+        // constructor
+        iterator(chainNode<T>* theNode = NULL)
+            {node = theNode;}
 
-            // dereferencing operators
-            T& operator*() const {return node->element;}
-            T* operator->() const {return &node->element;}
+        // dereferencing operators
+        T& operator*() const {return node->element;}
+        T* operator->() const {return &node->element;}
 
-            // increment
-            iterator& operator++()   // preincrement
-                      {node = node->next; return *this;}
-            iterator operator++(int) // postincrement
-            	      {iterator old = *this;
-            	       node = node->next;
-            	       return old;
-            	      }
+        // increment
+        iterator& operator++()   // preincrement
+                    {node = node->next; return *this;}
+        iterator operator++(int) // postincrement
+                    {iterator old = *this;
+                    node = node->next;
+                    return old;
+                    }
 
-            // equality testing
-            bool operator!=(const iterator right) const
-                  {return node != right.node;}
-            bool operator==(const iterator right) const
-                  {return node == right.node;}
-         protected:
-            chainNode<T>* node;
-      };  // end of iterator class
+        // equality testing
+        bool operator!=(const iterator right) const
+                {return node != right.node;}
+        bool operator==(const iterator right) const
+                {return node == right.node;}
+        protected:
+        chainNode<T>* node;
+    };  // end of iterator class
 
 
     //exercises
